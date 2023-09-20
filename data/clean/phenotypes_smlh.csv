@@ -1,0 +1,220 @@
+id,Name,Selected for RAD sequencing,Succesfully RAD sequenced,Whole genome resequenced,Age,Sex,Admit date,Blubber thickness,Admit weight,Death weight,Disposition,primary_class_num,primary_class,malnutrition,trauma,primary_bacterial_infect,secondary_bacterial_infect,congenital,protozoa,otostrongylis,herpes,admit_month,Year,smlh_msat,smlh_snp,smlh_gl,bacterial,malnutrition_bi,bacteria_bi,congenital_bi,worms_bi,protozoa_bi,trauma_bi
+ES2396,Kumquat (restrand),NA,NA,NA,yearling,female,2006-06-12,0.5,41.5,41,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,June,2006,0.57278720004137,NA,NA,0,1,0,0,0,0,0
+ES2545,Bissap,NA,NA,NA,pup,male,2006-03-22,NA,35.5,35,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2006,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES2549,Memphis,NA,NA,NA,pup,female,2006-03-24,0.6,32.5,32,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2006,1.40355734109465,NA,NA,0,1,0,0,0,0,0
+ES2556,Cantinslas,1,NA,NA,pup,male,2006-03-29,0.5,32,33,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2006,0.916459520066192,NA,0.000126818602945147,0,1,0,0,0,0,0
+ES2558,TomSavage,1,1,NA,pup,male,2006-03-30,5,34.5,33.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,1,March,2006,1.18762544246471,1.021265746,0.000103238440459738,0,1,0,0,0,0,0
+ES2559,Justmo,NA,NA,NA,pup,male,2006-03-30,NA,40.5,40.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2006,1.26013184009101,NA,NA,0,1,0,0,0,0,0
+ES2571,Draco,NA,NA,NA,pup,male,2006-04-09,0.5,38.5,38.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2006,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES2585,Rubius,NA,NA,NA,pup,male,2006-04-17,NA,29.2,32,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2006,0.893012507138565,NA,NA,0,1,0,0,0,0,0
+ES2629,Minestrone,1,1,NA,pup,female,2007-03-10,NA,29,26.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2007,1.51152329040963,1.088689348,9.06443327201642e-05,0,1,0,0,0,0,0
+ES2651,NA,1,1,NA,yearling,male,2007-03-23,1.7,68,68,dead on arrival,1,Malnutrition,1,0,0,0,0,0,0,0,March,2007,1.07965949314973,1.209321186,9.4176968389152e-05,0,1,0,0,0,0,0
+ES2656,Juustoa,NA,NA,NA,pup,male,2007-03-27,0.5,34,37,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2007,1.07965949314973,NA,NA,0,1,0,0,0,0,0
+ES2664,Bootstrap Bill,NA,NA,NA,pup,female,2007-04-02,1.2,30.5,35,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2007,1.36791037016016,NA,NA,0,1,0,0,0,0,0
+ES2667,Berit,1,1,NA,pup,male,2007-04-04,1,39,35,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2007,0.683066438556055,1.016106851,0.000107562267347097,0,1,0,0,0,0,0
+ES2701,Bravery,NA,NA,NA,pup,male,2007-05-29,0.7,38.5,39.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,May,2007,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES2713,Thunder Strike,1,1,1,pup,male,2008-01-05,0.4,40,40,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,January,2008,0.755761645204814,1.136617107,9.31202872176942e-05,0,1,0,0,0,0,0
+ES2735,Sonette,1,1,NA,pup,male,2008-03-13,0.4,35,30.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.647795695889841,0.934887941,9.77959316159414e-05,0,1,0,0,0,0,0
+ES2737,Othello,NA,NA,NA,pup,female,2008-03-15,0.6,34,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,NA,NA,NA,0,1,0,0,0,0,0
+ES2738,Roo,NA,NA,NA,pup,female,2008-03-16,0.6,35,37,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES2756,Hessie,1,1,NA,pup,male,2008-03-25,0.6,38,40.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,1.18762544246471,0.94083209,0.000106845604564615,0,1,0,0,0,0,0
+ES2757,Ophelia,NA,NA,NA,pup,male,2008-03-26,0.8,29,31,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,1.29559139177968,NA,NA,0,1,0,0,0,0,0
+ES2766,French Fry,1,1,NA,pup,male,2008-03-29,0.3,31,32,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,1.51152329040963,0.973071003,9.48774164984609e-05,0,1,0,0,0,0,0
+ES2771,Louis,1,1,NA,pup,female,2008-03-30,0.2,41.5,44.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.971693543834761,0.906412003,0.000103520452304026,0,1,0,0,0,0,0
+ES2783,Nudibranch,NA,NA,NA,pup,female,2008-04-08,0.9,27.5,29.5,died in treatment,1,Malnutrition,1,0,0,1,0,0,0,0,April,2008,0.755761645204814,NA,NA,1,1,0,0,0,0,0
+ES2806,Americus,NA,NA,NA,pup,male,2008-04-26,0.6,31.5,34,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2008,1.07965949314973,NA,NA,0,1,0,0,0,0,0
+ES2813,Rovelle,1,NA,NA,pup,female,2008-05-03,1.2,34,36,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,May,2008,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES2839,Malaika,NA,NA,NA,pup,male,2009-03-06,0.3,23.5,23.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,1.01130022610223,NA,NA,0,1,0,0,0,0,0
+ES2841,Pico de Gallo,NA,NA,NA,pup,male,2009-03-08,0.6,36.5,31,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,0.801902080057918,NA,NA,0,1,0,0,0,0,0
+ES2853,Crisy Girl,NA,NA,NA,pup,female,2009-03-18,0.1,25.5,25,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES2855,Anita,1,1,NA,pup,female,2009-03-18,0.6,39,39,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,0.863727594519787,1.014636867,9.50741215129886e-05,0,1,0,0,0,0,0
+ES2856,Kazoo,NA,NA,NA,pup,male,2009-03-18,1.8,47,46.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,1.33317424507392,NA,NA,0,1,0,0,0,0,0
+ES2865,Gauguin,1,1,NA,pup,male,2009-03-23,0.3,30.5,31,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,1.01130022610223,0.970993534,8.59344620484307e-05,0,1,0,0,0,0,0
+ES2875,FoFum,NA,NA,NA,pup,male,2009-03-27,0.5,41,37.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES2879,Lilah,NA,NA,NA,pup,female,2009-03-28,0.5,27.5,25,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,1.07965949314973,NA,NA,0,1,0,0,0,0,0
+ES2887,Splodge,1,1,NA,pup,male,2009-03-30,0.7,38.2,38.2,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2009,1.07965949314973,0.976985806,9.7162917454619e-05,0,1,0,0,0,0,0
+ES2896,Bentley,NA,NA,NA,pup,male,2009-04-04,0.3,33.5,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2009,0.674200150734823,NA,NA,0,1,0,0,0,0,0
+ES2902,Maxo,NA,NA,NA,pup,male,2009-04-05,0.7,35,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2009,0.647795695889841,NA,NA,0,1,0,0,0,0,0
+ES2934,ToryTara,NA,NA,NA,pup,female,2009-04-22,0.3,31,30,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2009,0.863727594519787,NA,NA,0,1,0,0,0,0,0
+ES2942,Riff,NA,NA,NA,pup,female,2009-04-27,0.8,35,33.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,April,2009,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES2976,Sausage,NA,NA,NA,pup,male,2010-02-20,0.4,43,37,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,February,2010,1.03101696007447,NA,NA,0,1,0,0,0,0,0
+ES2978,Tsunami Georgie,NA,NA,NA,pup,male,2010-02-27,0.5,29.5,27,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,February,2010,1.18762544246471,NA,NA,0,1,0,0,0,0,0
+ES2980,Huey,NA,NA,NA,pup,male,2010-02-28,0.5,38,32.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,February,2010,0.687344640049644,NA,NA,0,1,0,0,0,0,0
+ES2985,Rainer,1,1,NA,pup,male,2010-03-04,0.5,31.5,31,died in treatment,1,Malnutrition,1,1,0,0,0,0,0,0,March,2010,0.971693543834761,0.964444976,9.05412696868254e-05,0,1,0,0,0,0,0
+ES2986,Carter,NA,NA,NA,pup,female,2010-03-06,0.6,30,31,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.60380416011584,NA,NA,0,1,0,0,0,0,0
+ES2991,Wacky Woody,NA,NA,NA,pup,female,2010-03-08,0.5,33.5,33.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.990025897838007,NA,NA,0,1,0,0,0,0,0
+ES2997,Dozer Jim,NA,NA,NA,pup,male,2010-03-11,0.6,37.5,33,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.13844406426009,NA,NA,0,1,0,0,0,0,0
+ES3009,Cove,NA,NA,NA,pup,female,2010-03-15,0.3,32.5,31.5,died in treatment,1,Malnutrition,1,0,0,0,1,0,0,0,March,2010,1.07965949314973,NA,NA,0,1,0,0,0,0,0
+ES3020,BSB,NA,NA,NA,pup,female,2010-03-17,0.6,32.5,30.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES3023,Coasty,NA,NA,NA,pup,female,2010-03-18,0.4,30,26.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.755761645204814,NA,NA,0,1,0,0,0,0,0
+ES3025,Leilani,NA,NA,NA,pup,female,2010-03-19,0.4,34,32.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.18762544246471,NA,NA,0,1,0,0,0,0,0
+ES3027,Beerz,NA,NA,NA,pup,male,2010-03-19,0.5,39.5,42.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.14557440008274,NA,NA,0,1,0,0,0,0,0
+ES3031,Bullwinkles,NA,NA,NA,pup,female,2010-03-20,0.9,24.5,28,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.356102168286529,NA,NA,0,1,0,0,0,0,0
+ES3035,Tibbetts,NA,NA,NA,pup,male,2010-03-22,0.3,31.5,29.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.21197658643084,NA,NA,0,1,0,0,0,0,0
+ES3037,Tones,NA,NA,NA,pup,male,2010-03-22,0.7,35,32,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES3039,Zischka,NA,NA,NA,pup,female,2010-03-23,0.4,30,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.6194892397246,NA,NA,0,1,0,0,0,0,0
+ES3044,Judah,NA,NA,NA,pup,female,2010-03-26,0.6,35.5,34,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.801902080057918,NA,NA,0,1,0,0,0,0,0
+ES3052,Gary Moss,NA,NA,NA,pup,male,2010-03-27,0.2,29.5,28.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.863727594519787,NA,NA,0,1,0,0,0,0,0
+ES3055,Horizon,NA,NA,NA,pup,female,2010-03-27,0.7,35,36,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,0.863727594519787,NA,NA,0,1,0,0,0,0,0
+ES3062,Son of Neptune,NA,NA,NA,pup,male,2010-03-29,0.7,39.5,37.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2010,1.40355734109465,NA,NA,0,1,0,0,0,0,0
+ES3148,Second Day,1,1,NA,pup,male,2011-01-25,1.4,33.5,35.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,January,2011,1.40355734109465,0.946026955,8.43633697472119e-05,0,1,0,0,0,0,0
+ES3150,Mazee,1,1,NA,pup,female,2011-03-02,0.5,31.5,27,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,0.863727594519787,0.98582501,0.000100541297175769,0,1,0,0,0,0,0
+ES3151,D Street,NA,NA,NA,pup,male,2011-03-02,0.6,36.5,27.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.12366691789137,NA,NA,0,1,0,0,0,0,0
+ES3152,LBDay,NA,NA,NA,pup,male,2011-03-05,0.5,36,34,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,0.863727594519787,NA,NA,0,1,0,0,0,0,0
+ES3153,Emerald,NA,NA,NA,pup,female,2011-03-06,0.6,40,40.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.6194892397246,NA,NA,0,1,0,0,0,0,0
+ES3154,Teemu,1,1,NA,pup,female,2011-03-07,0.3,31.5,29.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.07965949314973,0.995171546,9.2185024706854e-05,0,1,0,0,0,0,0
+ES3157,Diwaco,1,1,NA,pup,male,2011-03-09,0.8,40,37,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.26951285333611,0.963907155,0.00010066740122507,0,1,0,0,0,0,0
+ES3160,Sendai,NA,NA,NA,pup,female,2011-03-12,0.4,28.5,26.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.18762544246471,NA,NA,0,1,0,0,0,0,0
+ES3163,Shamrock,NA,NA,NA,pup,male,2011-03-13,0.2,30.5,26.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.18762544246471,NA,NA,0,1,0,0,0,0,0
+ES3169,Mawu,NA,NA,NA,pup,male,2011-03-17,0.7,40,30.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,0.687344640049644,NA,NA,0,1,0,0,0,0,0
+ES3174,Chiff,NA,NA,NA,pup,female,2011-03-21,0.3,40,33.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,0.788102890665824,NA,NA,0,1,0,0,0,0,0
+ES3175,Poppa Sandy,NA,NA,NA,pup,male,2011-03-22,1.8,48,48,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.18762544246471,NA,NA,0,1,0,0,0,0,0
+ES3180,Sweet Rock,NA,NA,NA,pup,female,2011-03-26,0.5,36,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,0.898933534313097,NA,NA,0,1,0,0,0,0,0
+ES3182,Kito,NA,NA,NA,pup,male,2011-03-28,0.2,31,29,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.33951876070785,NA,NA,0,1,0,0,0,0,0
+ES3189,Puddintame,NA,NA,NA,pup,male,2011-03-31,0.8,30.5,30.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2011,1.29559139177968,NA,NA,0,1,0,0,0,0,0
+ES3193,Kommote,NA,NA,NA,pup,male,2011-04-01,0.9,36,37,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2011,0.956194318203674,NA,NA,0,1,0,0,0,0,0
+ES3197,Lacerta,NA,NA,NA,pup,male,2011-04-03,0.7,32.5,27.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2011,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES3203,Spencer,NA,NA,NA,pup,male,2011-04-07,0.8,27,27,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2011,0.971693543834761,NA,NA,0,1,0,0,0,0,0
+ES3214,Hayfork,NA,NA,NA,pup,male,2011-04-18,0.6,32.5,30.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2011,0.78656684252396,NA,NA,0,1,0,0,0,0,0
+ES3247,Toon,NA,NA,NA,weaner,female,2012-03-05,0.8,29,29.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,1.07965949314973,NA,NA,0,1,0,0,0,0,0
+ES3256,Parish,1,1,NA,pup,male,2012-03-14,0.8,40,35.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,NA,0.994020701,9.87415209646306e-05,0,1,0,0,0,0,0
+ES3258,Deveraux,1,NA,NA,pup,female,2012-03-17,0.3,28.5,25.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,0.32389784794492,NA,0.000108876988180967,0,1,0,0,0,0,0
+ES3279,Campbell,NA,NA,NA,pup,female,2012-03-25,0.7,37.5,34.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,1.29559139177968,NA,NA,0,1,0,0,0,0,0
+ES3283,Zephyr,1,1,1,pup,male,2012-03-25,1.4,39.5,44,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,1.18762544246471,0.996022358,0.000108484227420447,0,1,0,0,0,0,0
+ES3290,NA,NA,NA,NA,pup,male,2012-03-28,1.5,37,37,dead on arrival,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,0.863727594519787,NA,NA,0,1,0,0,0,0,0
+ES3291,Garcia,NA,NA,NA,pup,male,2012-03-28,1.3,42.5,43.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,0.916459520066192,NA,NA,0,1,0,0,0,0,0
+ES3300,Meko,NA,NA,NA,pup,female,2012-03-31,0.9,44.5,44.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2012,1.51152329040963,NA,NA,0,1,0,0,0,0,0
+ES3306,Sea Squirt,NA,NA,NA,pup,female,2012-04-02,0.4,32.5,33,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2012,0.727185951858504,NA,NA,0,1,0,0,0,0,0
+ES3332,Itchy,NA,NA,NA,pup,female,2012-04-14,0.9,37.5,37.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,April,2012,1.09077892778776,NA,NA,0,1,0,0,0,0,0
+ES3357,Double Heelex,1,NA,NA,pup,male,2012-05-04,0.9,39.5,37.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,May,2012,1.29559139177968,NA,0.000118590314720497,0,1,0,0,0,0,0
+ES2532,Sea Glass,1,NA,NA,pup,female,2006-03-12,0.3,33.5,36.5,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,March,2006,0.755761645204814,NA,0.000112626443779373,0,0,0,0,0,0,1
+ES2551,Solove,1,1,1,pup,male,2006-03-26,0.6,31,31,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,March,2006,1.10227645977535,0.956224549,0.000104249246884155,0,0,0,0,0,0,1
+ES2554,Featherstone (restrand),1,1,NA,pup,male,2006-04-07,0.6,36,35.5,died in treatment,2,Trauma,0,1,0,0,0,0,0,0,April,2006,0.755761645204814,0.99841083,0.000112068829115638,0,0,0,0,0,0,1
+ES2628,Lemon,NA,NA,NA,yearling,female,2007-03-10,1.1,111.5,64.5,died in treatment,2,Trauma,0,1,0,0,0,0,0,0,March,2007,0.727185951858504,NA,NA,0,0,0,0,0,0,1
+ES2719,Chubina (restrand),NA,NA,NA,pup,female,2008-02-25,4.7,103,103,died in treatment,2,Trauma,0,1,0,1,0,0,0,0,February,2008,0.863727594519787,NA,NA,1,0,0,0,0,0,1
+ES2787,Smoke,1,1,NA,pup,male,2008-04-12,1.3,37.5,42,died in treatment,2,Trauma,0,1,0,0,0,0,0,0,April,2008,1.07965949314973,0.976415101,9.33588863788072e-05,0,0,0,0,0,0,1
+ES2792,Dassi,NA,NA,NA,pup,male,2008-04-14,0.9,30,41,euthanasia,2,Trauma,1,1,0,0,0,0,0,0,April,2008,0.971693543834761,NA,NA,0,0,0,0,0,0,1
+ES2816,Mountain,1,1,1,pup,male,2008-05-11,1,44,44,euthanasia,2,Trauma,0,1,0,1,0,0,0,0,May,2008,1.07965949314973,1.035494192,0.000114915874723854,1,0,0,0,0,0,1
+ES2826,Rancid,NA,NA,NA,pup,male,2008-08-30,NA,56,56,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,August,2008,1.12366691789137,NA,NA,0,0,0,0,0,0,1
+ES2829,Sebastian,1,1,1,pup,male,2008-11-01,3,80,80,dead on arrival,2,Trauma,0,1,0,0,0,0,0,0,November,2008,1.03101696007447,0.92602636,8.97091391049337e-05,0,0,0,0,0,0,1
+ES2832,Juan,1,NA,NA,yearling,male,2009-02-16,0.7,67,67,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,February,2009,0.898933534313097,NA,NA,0,0,0,0,0,0,1
+ES2852,Sheela,NA,NA,NA,pup,male,2009-03-17,1.5,37.5,37.5,died in treatment,2,Trauma,0,1,0,0,0,0,0,1,March,2009,0.755761645204814,NA,NA,0,0,0,0,0,0,1
+ES2868,Ardvark (restrand),1,1,NA,pup,male,2009-05-01,1,49,49,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,May,2009,0.971693543834761,0.981605667,8.21937954910773e-05,0,0,0,0,0,0,1
+ES2872,Leva,NA,NA,NA,pup,male,2009-03-26,1.1,48,48,died in treatment,2,Trauma,0,1,0,1,0,0,0,0,March,2009,0.971693543834761,NA,NA,1,0,0,0,0,0,1
+ES2956,Pollock,1,1,NA,pup,male,2009-05-24,2,47,47,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,May,2009,1.07965949314973,0.957212427,0.000106393560391536,0,0,0,0,0,0,1
+ES3011,KLatson,1,1,NA,pup,male,2010-03-15,0.3,35.5,33,died in treatment,2,Trauma,0,1,0,0,0,0,0,0,March,2010,0.971693543834761,1.047170742,0.000121458890999177,0,0,0,0,0,0,1
+ES3155,Apollona,1,1,NA,pup,female,2011-03-09,0.4,58,58,euthanasia,2,Trauma,0,1,0,1,0,0,0,0,March,2011,0.971693543834761,0.918409598,8.60721843057303e-05,1,0,0,0,0,0,1
+ES3354,Peppermint,1,1,1,pup,female,2012-05-01,2,40,49.5,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,May,2012,0.830810534824705,1.034645345,0.000100403835090003,0,0,0,0,0,0,1
+FnMa012912,NA,NA,NA,NA,pup,male,2012-01-27,NA,NA,NA,carcass,2,Trauma,0,1,0,1,0,0,0,0,January,2012,NA,NA,NA,1,0,0,0,0,0,1
+ES2593,Bgers,NA,NA,NA,pup,male,2006-05-03,1.6,49.5,49.5,euthanasia,3,Bacterial infection,0,0,1,0,0,0,0,0,May,2006,1.18762544246471,NA,NA,1,0,1,0,0,0,0
+ES3206,Olivera,NA,NA,NA,pup,female,2011-04-10,0.7,35.5,31.5,died in treatment,3,Bacterial infection,1,0,1,1,0,0,0,0,April,2011,1.03101696007447,NA,NA,1,0,1,0,0,0,0
+ES3207,Mala,1,1,NA,pup,male,2011-04-10,0.6,34.5,31.2,euthanasia,3,Bacterial infection,0,0,1,0,0,0,0,0,April,2011,0.971693543834761,0.923907405,8.97538201478482e-05,1,0,1,0,0,0,0
+ES3230,Patience,1,1,NA,pup,male,2011-07-21,1.9,72.5,72.5,died in treatment,3,Bacterial infection,0,0,1,0,0,0,0,0,July,2011,1.33951876070785,1.002823758,9.51285007142358e-05,1,0,1,0,0,0,0
+ES2557,Carlberg,1,1,NA,pup,male,2006-03-30,0.7,39,33,died in treatment,3,Bacterial infection,1,0,0,1,0,0,0,0,March,2006,1.18762544246471,0.973218194,8.68626215543371e-05,1,0,1,0,0,0,0
+ES2599,Sturgis,1,1,NA,pup,male,2006-06-04,1.5,43.5,45,died in treatment,3,Bacterial infection,0,0,0,1,1,0,0,0,June,2006,0.863727594519787,1.033158456,0.000117120183956482,1,0,1,0,0,0,0
+ES2603,Jesse,NA,NA,NA,yearling,male,2006-08-14,0.5,73.5,73.5,euthanasia,3,Bacterial infection,0,0,0,1,0,0,0,0,August,2006,0.992048813797819,NA,NA,1,0,1,0,0,0,0
+ES2641,Otarie,NA,NA,NA,yearling,male,2007-03-18,0.9,72.5,60,euthanasia,3,Bacterial infection,0,1,0,1,0,0,0,0,March,2007,1.61662134655291,NA,NA,1,0,1,0,0,0,0
+ES2690,Matti,1,1,NA,pup,male,2007-04-19,1.7,39.5,39.5,euthanasia,3,Bacterial infection,1,0,0,1,1,0,0,0,April,2007,1.02459965783408,0.996910244,0.00011758446934472,1,0,1,0,0,0,0
+ES2729,Hangemhi,1,NA,NA,pup,female,2008-03-09,1,36.5,41.5,died in treatment,3,Bacterial infection,0,0,0,1,0,0,0,0,March,2008,1.51152329040963,NA,0.000104965626729648,1,0,1,0,0,0,0
+ES2774,Ketchup,1,1,NA,pup,male,2008-03-30,0.6,42,43.5,died in treatment,3,Bacterial infection,0,0,0,1,1,0,0,1,March,2008,1.29559139177968,0.970309018,0.000114850946633838,1,0,1,0,0,0,0
+ES2775,Poplar,NA,NA,NA,pup,male,2008-03-30,0.8,36.5,38,died in treatment,3,Bacterial infection,1,1,0,1,0,0,0,1,March,2008,1.23603360968051,NA,NA,1,0,1,0,0,0,0
+ES2782,Okra,1,1,NA,pup,female,2008-04-08,0.8,35,35,euthanasia,3,Bacterial infection,1,0,0,1,0,0,0,0,April,2008,0.863727594519787,1.245397109,0.000129335898991024,1,0,1,0,0,0,0
+ES2794,SamieJ,1,NA,NA,pup,female,2008-04-14,0.4,36,39,euthanasia,3,Bacterial infection,1,0,0,1,0,0,0,0,April,2008,0.971693543834761,NA,0.00013047078831697,1,0,1,0,0,0,0
+ES2795,Eno,1,NA,NA,pup,male,2008-04-15,1,36.5,41,died in treatment,3,Bacterial infection,1,0,0,1,0,0,0,1,April,2008,1.07965949314973,NA,0.000108434804724942,1,0,1,0,0,0,0
+ES2830,Drumroll,NA,NA,NA,pup,female,2008-11-16,0.6,48,46,died in treatment,3,Bacterial infection,0,0,0,1,0,0,0,1,November,2008,0.863727594519787,NA,NA,1,0,1,0,0,0,0
+ES2850,TT,1,NA,NA,pup,male,2009-03-16,1,38.2,42,died in treatment,3,Bacterial infection,1,0,0,1,1,0,0,0,March,2009,0.712123315564033,NA,0.000127748005904076,1,0,1,0,0,0,0
+ES2876,Sandi Beach,1,NA,NA,pup,female,2009-03-27,1.7,42.5,42.5,died in treatment,3,Bacterial infection,0,0,0,1,0,0,0,0,March,2009,0.647795695889841,NA,8.73475785969841e-05,1,0,1,0,0,0,0
+ES2936,Shoodog,1,1,NA,pup,male,2009-04-23,0.9,34.5,34.5,died in treatment,3,Bacterial infection,0,0,0,1,0,0,0,0,April,2009,0.916459520066192,0.910025184,0.000108324429442578,1,0,1,0,0,0,0
+ES2945,Jano,NA,NA,NA,pup,female,2009-04-30,0.5,38,35.5,died in treatment,3,Bacterial infection,1,1,0,0,0,0,0,0,April,2009,0.801902080057918,NA,NA,0,0,1,0,0,0,0
+ES3019,Nilton,1,1,NA,pup,female,2010-03-17,0.2,32,27.5,euthanasia,3,Bacterial infection,1,0,0,1,0,0,0,0,March,2010,0.863727594519787,0.939082355,0.000104387344755205,1,0,1,0,0,0,0
+ES3159,Tsunami11,1,1,NA,pup,male,2011-03-11,0.7,32,31.5,euthanasia,3,Bacterial infection,1,0,0,1,0,0,0,0,March,2011,0.863727594519787,0.988487448,0.000110729469308854,1,0,1,0,0,0,0
+ES3208,Lizpet,NA,NA,NA,pup,male,2011-04-10,1.1,39.5,40,died in treatment,3,Bacterial infection,0,0,0,1,0,0,0,0,April,2011,1.40355734109465,NA,NA,1,0,1,0,0,0,0
+ES3252,Baggy,1,1,1,yearling,female,2012-03-11,2,NA,62,euthanasia,3,Bacterial infection,0,0,0,1,0,0,0,0,March,2012,0.971693543834761,0.966816965,0.000101316493443932,1,0,1,0,0,0,0
+ES3289,Chastity,1,1,1,pup,male,2012-03-28,1.1,38.4,48,euthanasia,3,Bacterial infection,0,0,0,1,0,0,0,0,March,2012,0.647795695889841,0.936338246,0.00010807899347141,1,0,1,0,0,0,0
+ES3330,Capers,1,NA,NA,yearling,female,2012-04-13,1,66,66,euthanasia,3,Bacterial infection,0,0,0,1,0,0,0,0,April,2012,0.683066438556055,NA,8.57692023826702e-05,1,0,1,0,0,0,0
+ES3351,Solberg,1,1,1,pup,female,2012-04-28,1.3,38.5,38.5,euthanasia,3,Bacterial infection,1,1,0,1,0,0,0,0,April,2012,0.727185951858504,0.926280053,8.46300664546949e-05,1,0,1,0,0,0,0
+ES3369,Ellie Cat,NA,NA,NA,pup,male,2012-06-21,1.1,46.5,46.5,euthanasia,3,Bacterial infection,0,0,0,1,0,0,0,0,June,2012,1.07965949314973,NA,NA,1,0,1,0,0,0,0
+ES2581,Verde,NA,NA,NA,pup,female,2006-04-13,0.8,33,33,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,April,2006,0.781385943746244,NA,NA,0,0,0,1,0,0,0
+ES2730,Texas,NA,NA,NA,pup,female,2008-03-09,2,55,55,euthanasia,4,Congenital defect,0,1,0,0,1,0,0,0,March,2008,0.755761645204814,NA,NA,0,0,0,1,0,0,0
+ES2741,Irie,1,1,NA,pup,male,2008-03-17,1.5,38.5,40.5,died in treatment,4,Congenital defect,0,0,0,0,1,0,0,0,March,2008,1.07965949314973,1.048138855,0.000107842996229878,0,0,0,1,0,0,0
+ES2763,Gaig,1,1,NA,pup,female,2008-03-27,0.5,31.5,36,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,March,2008,1.48924672010756,1.069188396,9.28557023056801e-05,0,0,0,1,0,0,0
+ES2820,Ackack,1,NA,NA,pup,male,2008-05-21,1.3,39.2,47,died in treatment,4,Congenital defect,0,0,0,0,1,0,0,0,May,2008,1.18762544246471,NA,0.000124938788637178,0,0,0,1,0,0,0
+ES2854,Tuba,NA,NA,NA,pup,male,2009-03-18,0.1,32.6,30.5,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,March,2009,0.971693543834761,NA,NA,0,0,0,1,0,0,0
+ES2857,Marimba,1,1,NA,pup,male,2009-03-19,0.5,41,45.5,euthanasia,4,Congenital defect,0,0,0,0,1,0,0,0,March,2009,0.848383610501588,0.997487983,0.000114892144302394,0,0,0,1,0,0,0
+ES2989,Brew,NA,NA,NA,pup,male,2010-03-07,0.4,31,31,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,March,2010,1.03101696007447,NA,NA,0,0,0,1,0,0,0
+ES2999,Stence,NA,NA,NA,pup,female,2010-03-11,1,35.5,36,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,March,2010,1.03101696007447,NA,NA,0,0,0,1,0,0,0
+ES3060,Stepstool,1,1,NA,pup,male,2010-03-28,1,44.5,44.5,euthanasia,4,Congenital defect,0,0,0,0,1,0,0,0,March,2010,1.07965949314973,0.91635403,9.66992064902979e-05,0,0,0,1,0,0,0
+ES3061,Big Spin,1,NA,NA,pup,male,2010-03-29,1.1,39,35.5,euthanasia,4,Congenital defect,0,1,0,0,1,0,0,0,March,2010,1.27893773512761,NA,9.0958021620208e-05,0,0,0,1,0,0,0
+ES3149,Waddeler,NA,NA,NA,pup,female,2011-02-06,0.9,45,37,died in treatment,4,Congenital defect,0,1,0,0,1,0,0,0,February,2011,1.13844406426009,NA,NA,0,0,0,1,0,0,0
+ES3211,Lil Spit,NA,NA,NA,pup,male,2011-04-16,0.7,39,36,euthanasia,4,Congenital defect,1,0,0,0,1,0,0,0,April,2011,0.687344640049644,NA,NA,0,0,0,1,0,0,0
+ES3217,Friday Fellow,1,NA,NA,pup,male,2011-04-22,1.2,42,45,died in treatment,4,Congenital defect,0,0,0,0,1,0,0,0,April,2011,0.755761645204814,NA,0.000117220765873653,0,0,0,1,0,0,0
+ES3218,Ponder,NA,NA,NA,pup,male,2011-04-28,0.9,29.5,56.5,died in treatment,4,Congenital defect,0,0,0,0,1,0,0,0,April,2011,0.916459520066192,NA,NA,0,0,0,1,0,0,0
+ES3223,Jewel,1,1,NA,pup,male,2011-05-23,1,45,45,euthanasia,4,Congenital defect,0,0,0,0,1,0,0,0,May,2011,1.18762544246471,1.04780379,0.000103911673519462,0,0,0,1,0,0,0
+ES3255,Buenos Noches,1,NA,NA,pup,male,2012-03-13,0.4,33.5,33.5,euthanasia,4,Congenital defect,1,0,0,0,1,0,0,0,March,2012,1.07965949314973,NA,0.000126649627452454,0,0,0,1,0,0,0
+ES3304,Eden,NA,NA,NA,pup,male,2012-04-01,1.5,35.5,35,died in treatment,4,Congenital defect,1,0,0,0,1,0,0,0,April,2012,1.29559139177968,NA,NA,0,0,0,1,0,0,0
+ES2695,Bogart,1,1,NA,pup,male,2007-04-24,1.8,40.5,40.5,euthanasia,5,Protozoa,0,0,0,0,0,1,0,0,April,2007,NA,0.936112012,9.29428446443721e-05,0,0,0,0,0,1,0
+ES2714,Lightning Bolt,NA,NA,NA,pup,female,2008-01-05,0.7,44.5,44.5,died in treatment,5,Protozoa,1,0,0,0,0,1,0,0,January,2008,1.07965949314973,NA,NA,0,0,0,0,0,1,0
+ES2715,Franie,NA,NA,NA,pup,male,2008-01-06,0.5,33,30,died in treatment,5,Protozoa,1,1,0,0,0,1,0,0,January,2008,0.893012507138565,NA,NA,0,0,0,0,0,1,0
+ES3347,Corralina,1,1,1,pup,female,2012-04-24,1.3,41,39,euthanasia,5,Protozoa,0,0,0,0,0,1,0,0,April,2012,0.916459520066192,1.073125392,9.68427004533936e-05,0,0,0,0,0,1,0
+ES2576,JYD,NA,NA,NA,pup,female,2006-04-08,0.6,34.5,39.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2006,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES2586,Martinsville,NA,NA,NA,pup,female,2006-04-18,1.2,41.5,41.5,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,1,April,2006,0.458229760033096,NA,NA,0,0,0,0,1,0,0
+ES2588,Evelynick,NA,NA,NA,pup,male,2006-04-23,0.9,32,32,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2006,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES2589,Klint,1,1,NA,pup,male,2006-04-27,1,42,45.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2006,0.647795695889841,0.944136627,0.000103666753822977,0,0,0,0,1,0,0
+ES2594,Medivac,NA,NA,NA,pup,male,2006-05-03,0.8,37,40,died in treatment,6,Otostrongylis,0,0,0,0,1,0,1,0,May,2006,0.755761645204814,NA,NA,0,0,0,0,1,0,0
+ES2624,Gorganzola (restrand),NA,NA,NA,pup,male,2007-07-07,0.7,38,38,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,1,July,2007,1.03101696007447,NA,NA,0,0,0,0,1,0,0
+ES2692,Frappe,1,1,1,pup,male,2007-04-21,1,38.5,37,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2007,1.07965949314973,1.087103941,8.96138804468292e-05,0,0,0,0,1,0,0
+ES2697,Mocha,1,1,1,pup,male,2007-04-28,1,42,42,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2007,0.57278720004137,0.951993982,8.83788823928754e-05,0,0,0,0,1,0,0
+ES2698,Cava,1,1,NA,pup,male,2007-05-07,1.7,43.5,49,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,0,May,2007,1.07965949314973,1.048618472,0.000108531926493641,0,0,0,0,1,0,0
+ES2740,Ferris,NA,NA,NA,pup,male,2008-03-17,0.6,44,45,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,March,2008,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES2772,McLovin,NA,NA,NA,pup,female,2008-03-30,1,33.5,33.5,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,March,2008,1.29559139177968,NA,NA,0,0,0,0,1,0,0
+ES2805,Superbad (restrand),1,1,NA,pup,female,2008-04-26,1.3,36,39.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2008,1.6194892397246,0.938248591,7.72925827180534e-05,0,0,0,0,1,0,0
+ES2808,IForce,NA,NA,NA,pup,female,2008-04-27,0.4,40.5,40,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2008,1.12366691789137,NA,NA,0,0,0,0,1,0,0
+ES2810,Weinstein,NA,NA,NA,pup,male,2008-04-28,0.9,41.5,41.5,died in treatment,6,Otostrongylis,0,0,0,0,1,0,1,0,April,2008,0.755761645204814,NA,NA,0,0,0,0,1,0,0
+ES2811,Fonzi,NA,NA,NA,pup,female,2008-04-29,0.6,42,43,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2008,1.12366691789137,NA,NA,0,0,0,0,1,0,0
+ES2821,Woobywoo,NA,NA,NA,pup,female,2008-05-27,1,41,42,died in treatment,6,Otostrongylis,0,0,0,0,0,1,1,0,May,2008,0.239048579550918,NA,NA,0,0,0,0,1,0,0
+ES2825,Mockey,NA,NA,NA,pup,female,2008-07-01,0.6,53.5,59,died in treatment,6,Otostrongylis,0,1,0,0,0,0,1,0,July,2008,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES2845,Geppetto (re-restrand),1,1,NA,pup,male,2009-04-26,0.3,37.5,40,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.971693543834761,1.073441074,0.000110668427960313,0,0,0,0,1,0,0
+ES2895,Biscotti,1,1,NA,pup,male,2009-04-04,1.2,45,49.1,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.919814662938736,1.048615477,0.000120640983084261,0,0,0,0,1,0,0
+ES2906,Swimmy,1,1,NA,pup,female,2009-04-07,0.7,35,36,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.863727594519787,0.987153658,9.4268858063755e-05,0,0,0,0,1,0,0
+ES2909,LaPaz,NA,NA,NA,pup,female,2009-04-10,0.8,38.5,43,died in treatment,6,Otostrongylis,0,0,0,1,0,0,1,0,April,2009,1.18762544246471,NA,NA,1,0,0,0,1,0,0
+ES2910,Guinny (restrand),1,1,NA,pup,female,2009-06-01,0.6,39,35.5,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,0,June,2009,0.343672320024822,1.089323287,0.00010134802139592,0,0,0,0,1,0,0
+ES2913,Irwin,1,1,1,pup,female,2009-04-12,0.7,35,36,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.458229760033096,0.948472253,0.000105766265998003,0,0,0,0,1,0,0
+ES2915,Tarnation,1,1,1,pup,female,2009-04-13,0.4,39,49,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.863727594519787,0.942672398,0.000103567533503318,0,0,0,0,1,0,0
+ES2919,Frijole,1,NA,NA,pup,male,2009-04-16,0.9,44.5,43,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.647795695889841,NA,0.000117028773470398,0,0,0,0,1,0,0
+ES2920,BOA,NA,NA,NA,pup,female,2009-04-16,0.6,36.5,39,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.971693543834761,NA,NA,0,0,0,0,1,0,0
+ES2923,Hanford,1,NA,NA,pup,female,2009-04-18,0.7,39,41.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,NA,NA,0.000129475455755597,0,0,0,0,1,0,0
+ES2927,Tulare,NA,NA,NA,pup,female,2009-04-19,0.1,32,33.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,1.01130022610223,NA,NA,0,0,0,0,1,0,0
+ES2929,Morisot,1,NA,NA,pup,female,2009-04-20,0.6,27.5,30,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.561833458945685,NA,0.000125395101871153,0,0,0,0,1,0,0
+ES2930,Sandoval,1,1,1,pup,female,2009-04-21,0.1,35.5,30,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.971693543834761,0.953126533,8.16731124826063e-05,0,0,0,0,1,0,0
+ES2943,BabyBlue,NA,NA,NA,pup,female,2009-04-29,1,36,38.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES2944,Diva,NA,NA,NA,pup,male,2009-04-30,1.1,45,45,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.971693543834761,NA,NA,0,0,0,0,1,0,0
+ES2946,Ewell,1,1,1,pup,male,2009-05-01,1,38,39.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,0.647795695889841,1.004310382,9.09092671488636e-05,0,0,0,0,1,0,0
+ES2948,Bhavna,1,1,NA,pup,female,2009-05-06,1,45,45,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,1.14557440008274,1.032073098,0.000104794278556107,0,0,0,0,1,0,0
+ES2952,Kazoomada,1,1,NA,pup,female,2009-05-15,0.1,39.5,41,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,0,May,2009,0.755761645204814,0.984009981,0.000101912003005791,0,0,0,0,1,0,0
+ES2954,Triny (restrand),1,1,NA,pup,male,2009-05-24,0.7,42.5,37.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,1.03101696007447,0.933495456,8.24104204718224e-05,0,0,0,0,1,0,0
+ES2955,Superintendent,1,1,NA,pup,female,2009-05-22,1,45,45,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,0.755761645204814,1.176461229,0.000140328763072966,0,0,0,0,1,0,0
+ES2957,Berlin,1,NA,NA,pup,male,2009-05-27,2,49.6,49.6,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,1.26013184009101,NA,0.000104141437312835,0,0,0,0,1,0,0
+ES2960,Pago,1,NA,NA,pup,male,2009-05-31,1.2,46,46.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2009,0.647795695889841,NA,0.000130665165790617,0,0,0,0,1,0,0
+ES3124,Gully,1,NA,NA,pup,female,2010-05-06,0.9,40,39.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2010,1.03101696007447,NA,9.83908347821135e-05,0,0,0,0,1,0,0
+ES3129,Make One Up,NA,NA,NA,pup,male,2010-05-14,1.8,52.5,55,euthanasia,6,Otostrongylis,0,1,0,0,0,0,1,0,May,2010,0.801902080057918,NA,NA,0,0,0,0,1,0,0
+ES3200,Emilio (restrand),NA,NA,NA,pup,male,2011-06-19,1.5,41.5,41.5,died in treatment,6,Otostrongylis,1,1,0,0,0,0,1,0,June,2011,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES3225,Tyco,NA,NA,NA,weaner,male,2011-06-11,1.2,45,49.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,June,2011,1.00463907053089,NA,NA,0,0,0,0,1,0,0
+ES3231,Chuckwalla,1,NA,NA,pup,male,2011-07-24,0.8,54.5,54.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,July,2011,1.18762544246471,NA,9.12035177253668e-05,0,0,0,0,1,0,0
+ES3232,NA,NA,NA,NA,yearling,male,2011-08-06,1,NA,53.5,dead on arrival,6,Otostrongylis,0,0,0,0,0,0,1,0,August,2011,0.971693543834761,NA,NA,0,0,0,0,1,0,0
+ES3287,Cilantro,1,1,NA,pup,male,2012-03-27,0.9,39,44,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,March,2012,0.916459520066192,0.920628114,0.000104821288724504,0,0,0,0,1,0,0
+ES3296,Tyga,NA,NA,NA,pup,female,2012-03-30,1.3,39.5,42,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,March,2012,0.863727594519787,NA,NA,0,0,0,0,1,0,0
+ES3307,Aspen,1,1,NA,pup,male,2012-04-02,0.8,39.5,41.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,0.971693543834761,1.022255194,8.78500364340921e-05,0,0,0,0,1,0,0
+ES3311,Obstacle,NA,NA,NA,pup,male,2012-04-02,0.6,41.5,39.5,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2012,1.18762544246471,NA,NA,0,0,0,0,1,0,0
+ES3314,Bagel,1,1,NA,pup,male,2012-04-03,0.9,43.5,45,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.07965949314973,0.879542025,0.000114724393157212,0,0,0,0,1,0,0
+ES3323,Garlic,1,NA,NA,pup,male,2012-04-07,1,50,48,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.72745518903957,NA,9.97447239448565e-05,0,0,0,0,1,0,0
+ES3329,Little Thunder,NA,NA,NA,pup,male,2012-04-13,0.6,36.5,42.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.21197658643084,NA,NA,0,0,0,0,1,0,0
+ES3331,Bazile,NA,NA,NA,yearling,male,2012-04-13,1.8,85.5,72.3,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,0.755761645204814,NA,NA,0,0,0,0,1,0,0
+ES3335,Spring,1,1,1,pup,female,2012-04-15,1.2,37.5,35,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,0.863727594519787,0.948625517,7.85209385680946e-05,0,0,0,0,1,0,0
+ES3342,Snicklefritz,1,1,NA,pup,male,2012-04-18,0.9,41.5,37.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.07965949314973,0.926231088,0.000102548613378524,0,0,0,0,1,0,0
+ES3344,Cowboy Annie,NA,NA,NA,pup,female,2012-04-23,1,42.5,42.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.40355734109465,NA,NA,0,0,0,0,1,0,0
+ES3350,Mikuni,NA,NA,NA,pup,female,2012-04-27,1.3,43,49,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2012,1.07965949314973,NA,NA,0,0,0,0,1,0,0
+ES3356,Natti,1,1,1,pup,female,2012-05-03,0.8,48.5,45,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,May,2012,0.971693543834761,0.981431155,8.23115477502157e-05,0,0,0,0,1,0,0
+ES3358,Babbar,1,1,1,pup,female,2012-05-12,0.7,39.5,32,died in treatment,6,Otostrongylis,1,0,0,0,0,0,1,0,May,2012,0.755761645204814,1.220377997,9.71726255017931e-05,0,0,0,0,1,0,0
+ES3359,Dumbo Zeke,NA,NA,NA,pup,male,2012-05-12,1,48,41,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,May,2012,0.57278720004137,NA,NA,0,0,0,0,1,0,0
+ES3361,Goose,NA,NA,NA,pup,female,2012-05-19,NA,48.5,42,died in treatment,6,Otostrongylis,0,0,0,0,1,0,1,0,May,2012,1.13844406426009,NA,NA,0,0,0,0,1,0,0
+ES3368,Ole Grant,1,1,1,pup,female,2012-06-14,2,38,42,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,June,2012,1.14557440008274,0.978981592,9.38570243051649e-05,0,0,0,0,1,0,0
