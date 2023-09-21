@@ -19,7 +19,7 @@ In the `data/raw` sub-folder, you will find a number of files:
 * elephant_seal_sequence_report.tsv: sequence report containing chromosome lengths taken from NCBI: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_021288785.2/ 
 
 ## sMLH values
-In the `data/smlh` sub-folder, you will find a number of files that contain sMLH (and g2) calculations. These values are calculated using the scripts in the sub-folder `scripts/smlh`.
+In the `data/smlh` sub-folder, you will find a number of files that contain sMLH (and g2) calculations. These values are calculated using the `scripts/1_smlh_g2_hwe.R` script.
 
 * smlh_genomewide_msats.txt: contains sMLH values based on microsatellite data 
 * smlh_snp.txt: contains sMLH values based on RAD-seq SNP data
@@ -39,7 +39,7 @@ In the `data/clean` sub-folder, you will find a number of cleaned up files that 
 
 The scripts for the full workflow are arranged in order of the methods described in the paper. All scripts are R scripts that have been run in R version 3.6.3. Package versions are described in the paper. The output of the models is not stored on github due to the large file sizes, but can be regenerated on your local device. 
 
-* 1_smlh_g2_hwe.R: this script takes the raw microsatellite file and tests for Hardy_Weinberg equilibrium, filters accordingly, and subsequently calculates sMLH and g2 based on the clean genotypes
+* 1_smlh_g2_hwe.R: this script takes the raw microsatellite file and tests for Hardy_Weinberg equilibrium, filters accordingly, and subsequently calculates sMLH and g2 based on the clean genotypes. Next, it calculates sMLH based on RAD-seq SNP genotypes both genome-wide and on a chromosome-by-chromosome basis.
 * 2_clean_phenotypes.R: this script cleans up the raw phenotypic data file and produces the clean data file, including genome-wide sMLH estimates based on the various methods used. Adjustments include renaming of variables and creating several new ones.
 * 3_model_inbreeding_cat.R: this script contains the glmers implemented in the Bayesian package brms to predict the effect of sMLH on the 6 death cause categories. Diagnostic plots of the posterior distribution can be found in plots/diagnostics/
 * 4_model_inbreeding_mass_blubber.R: this script contains the glmers implemented in the Bayesian package brms to predict the effect of sMLH on body mass and blubber thickness at admittance. Diagnostic plots of the posterior distribution can be found in plots/diagnostics/
