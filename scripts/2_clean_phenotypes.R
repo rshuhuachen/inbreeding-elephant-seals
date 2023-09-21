@@ -1,7 +1,6 @@
 #### Cleaning phenotypic data from excel sheet ####
 
 #### Load packages ####
-if (!require("pacman")) install.packages("pacman") #pacman can be used to load and/or install required packages for each script
 
 pacman::p_load(readxl, tidyverse, lubridate, data.table)
 

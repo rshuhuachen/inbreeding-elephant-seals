@@ -14,7 +14,8 @@ Please find below a description of all raw data sets and the scripts
 
 In the `data/raw` sub-folder, you will find a number of files:
 * NES dataset 19_04_23.xlsx: this is an excel file containing the full phenotypic data set (e.g. primary classifications
-  for the cause of death, individual ID's and sex, etc.)
+  for the cause of death, individual ID's and sex, etc.) as well as microsatellite genotypes (N = 219)
+* NES_notImp.raw: genotype data from RAD-seq SNPs in plink raw format (N = 74)
 * elephant_seal_sequence_report.tsv: sequence report containing chromosome lengths taken from NCBI: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_021288785.2/ 
 
 ## sMLH values

@@ -1,5 +1,7 @@
 #### Cleaning microsatellite data from excel sheet ####
 #### MESS- TAKE FROM DAVID ###
+if (!require("pacman")) install.packages("pacman") #pacman can be used to load and/or install required packages for each script
+
 pacman::p_load(readxl, inbreedR, tidyverse, adegenet, pegas)
 
 #### load in data ####
