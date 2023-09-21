@@ -8,7 +8,7 @@ To import the repository to your local device, ensure you have git installed and
 git clone https://github.com/rshuhuachen/inbreeding-elephant-seals.git
 ```
 
-Please find below a description of all raw data sets and the scripts
+Please find below a description of all raw and clean data sets and the scripts used to clean up data, run models, and plot figures.
 
 ## Raw data
 

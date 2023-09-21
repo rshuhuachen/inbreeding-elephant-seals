@@ -123,37 +123,7 @@ data_other$bottom <- data_other$outer %>%
 
 ## plot
 
-ggplot(data = data_other$outer) + aes(x = .data$x, y = .data$response) + 
-  geom_ridgeline(aes(scale = 0.4, height = scaled_density, fill = model, col = model), size = 0.8)+
-  geom_segment(data = brms_other_interval, aes(x = l, xend = h, yend = response), col = "black", linewidth=3)+
-  geom_segment(data = brms_other_interval, aes(x = ll, xend = hh, yend = response), col = "black")+
-  geom_point(data = brms_other_interval, aes(x = m, y = response), color="black", fill = "grey60", shape=21, size = 4) + 
-  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
-  facet_wrap(~model, ncol = 2, scales="free") +
-  scale_fill_manual(values =alpha(c("#7570b3", "#d95f02"), 0.6)) +
-  scale_color_manual(values =c("#7570b3", "#d95f02")) +
-#  xlim(-1.5, 1.5)+
-  labs(x = expression(paste("Standardised ", italic("beta"), " coefficient")))+
-  theme_bw(base_family = "Arial")+
-  scale_y_discrete("Trait", labels=scales::label_wrap(5))+
-  theme(axis.text = element_text(size=20, color = "black"),
-        text = element_text(size = 24),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        plot.subtitle = element_text(hjust = .5),
-        strip.background = element_blank(),
-        legend.position = "none",
-        plot.margin = margin(1,1,1,1, "cm"),
-        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
-                                    color = "black"),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0),
-                                    color = "black")) -> plot_1b_blubber_weight
-
-### divide up between the two
+### divide up between the two traits
 ggplot(data = subset(data_other$outer, response == "Body mass")) + 
   aes(x = .data$x, y = .data$response) + 
   geom_ridgeline(aes(scale = 0.4, height = scaled_density, fill = model, col = model), size = 0.8)+
@@ -214,11 +184,7 @@ ggplot(data = subset(data_other$outer, response == "Blubber thickness")) +
                                     color = "black")) -> plot_1b_blubber
 
 
-ggsave(plot_1b_blubber_weight, filename = "plots/final/Plot1b_other_bayes.png", width=10, height=8)
-ggsave(plot_1b_blubber, filename = "plots/final/Plot1b_blubber_bayes.png", width=10, height=8)
-ggsave(plot_1b_weight, filename = "plots/final/Plot1b_weight_bayes.png", width=10, height=8)
-
-## sepearte aces
+## separate axes
 title <- ggdraw() + 
   draw_label(
     "Trait",
@@ -234,46 +200,35 @@ title <- ggdraw() +
   
 plot_grid(plot_1b_weight, plot_1b_blubber, nrow = 2, align = "hv", axis = "lb", rel_heights = c(1, 0.9)) -> plot_1b_blubber_weight_2
 plot_grid(title, plot_1b_blubber_weight_2, rel_widths = c(0.1, 1)) -> plot_1b_blubber_weight_2 # add title
-ggsave(plot_1b_blubber_weight_2, filename = "plots/final/Plot1b_other_bayes_v2.png", width=10, height=8)
+ggsave(plot_1b_blubber_weight_2, filename = "plots/final/Plot1b_other_bayes.png", width=10, height=8)
 
 ##### Plot 1c: Primary classification presence/absence bayes #####
 #load data
-#leave out GL models
+
 load( file = "output/brms_binaryprimary_malnutrition_msat.RData")
 load( file = "output/brms_binaryprimary_malnutrition_snp.RData")
-#load( file = "output/brms_binaryprimary_malnutrition_gl.RData")
 load( file = "output/brms_binaryprimary_congenital_msat.RData")
 load( file = "output/brms_binaryprimary_congenital_snp.RData")
-#load( file = "output/brms_binaryprimary_congenital_gl.RData")
 load( file = "output/brms_binaryprimary_bacteria_msat.RData")
 load( file = "output/brms_binaryprimary_bacteria_snp.RData")
-#load( file = "output/brms_binaryprimary_bacteria_gl.RData")
 load( file = "output/brms_binaryprimary_protozoa_msat.RData")
 load( file = "output/brms_binaryprimary_protozoa_snp.RData")
-#load( file = "output/brms_binaryprimary_protozoa_gl.RData")
 load( file = "output/brms_binaryprimary_trauma_msat.RData")
 load( file = "output/brms_binaryprimary_trauma_snp.RData")
-#load( file = "output/brms_binaryprimary_trauma_gl.RData")
 load( file = "output/brms_binaryprimary_worms_msat.RData")
 load( file = "output/brms_binaryprimary_worms_snp.RData")
-#load( file = "output/brms_binaryprimary_worms_gl.RData")
 
 ### combine results in one df
 brms_primary_bi_interval <- rbind(mcmc_intervals_data(model_congenital_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_congenital_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  #mcmc_intervals_data(model_congenital_bi_smlh_gl, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_bacteria_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_bacteria_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  # mcmc_intervals_data(model_bacteria_bi_smlh_gl, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_protozoa_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_protozoa_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  # mcmc_intervals_data(model_protozoa_bi_smlh_gl, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_trauma_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_trauma_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  #mcmc_intervals_data(model_trauma_bi_smlh_gl, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_worms_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_worms_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  #mcmc_intervals_data(model_worms_bi_smlh_gl, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_malnutrition_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
                                   mcmc_intervals_data(model_malnutrition_bi_smlh_snp, prob =0.8, prob_outer = 0.9))
 # mcmc_intervals_data(model_malnutrition_bi_smlh_gl, prob =0.8, prob_outer = 0.9))
@@ -288,61 +243,44 @@ brms_primary_bi_interval$response <- rep(c("Congenital defect", "Bacteria", "Pro
 #areas
 brms_primary_bi_area <- rbind(mcmc_areas_data(model_congenital_bi_smlh_msat),
                               mcmc_areas_data(model_congenital_bi_smlh_snp),
-                              # mcmc_areas_data(model_congenital_bi_smlh_gl),
                               mcmc_areas_data(model_bacteria_bi_smlh_msat),
                               mcmc_areas_data(model_bacteria_bi_smlh_snp),
-                              # mcmc_areas_data(model_bacteria_bi_smlh_gl),
                               mcmc_areas_data(model_protozoa_bi_smlh_msat),
                               mcmc_areas_data(model_protozoa_bi_smlh_snp),
-                              # mcmc_areas_data(model_protozoa_bi_smlh_gl),
                               mcmc_areas_data(model_trauma_bi_smlh_msat),
                               mcmc_areas_data(model_trauma_bi_smlh_snp),
-                              # mcmc_areas_data(model_trauma_bi_smlh_gl),
                               mcmc_areas_data(model_worms_bi_smlh_msat),
                               mcmc_areas_data(model_worms_bi_smlh_snp),
-                              # mcmc_areas_data(model_worms_bi_smlh_gl),
                               mcmc_areas_data(model_malnutrition_bi_smlh_msat),
                               mcmc_areas_data(model_malnutrition_bi_smlh_snp))
-# mcmc_areas_data(model_malnutrition_bi_smlh_gl))
+
 
 
 brms_primary_bi_area$model <- c(rep("22 microsatellites", nrow(mcmc_areas_data(model_congenital_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_congenital_bi_smlh_snp))),
-                                # rep("Genotype likelihoods", nrow(mcmc_areas_data(model_congenital_bi_smlh_gl))),
                                 rep("22 microsatellites", nrow(mcmc_areas_data(model_bacteria_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_bacteria_bi_smlh_snp))),
-                                # rep("Genotype likelihoods", nrow(mcmc_areas_data(model_bacteria_bi_smlh_gl))),
                                 rep("22 microsatellites", nrow(mcmc_areas_data(model_protozoa_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_protozoa_bi_smlh_snp))),
-                                #  rep("Genotype likelihoods", nrow(mcmc_areas_data(model_protozoa_bi_smlh_gl))),
                                 rep("22 microsatellites", nrow(mcmc_areas_data(model_trauma_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_trauma_bi_smlh_snp))),
-                                #  rep("Genotype likelihoods", nrow(mcmc_areas_data(model_trauma_bi_smlh_gl))),
                                 rep("22 microsatellites", nrow(mcmc_areas_data(model_worms_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_worms_bi_smlh_snp))),
-                                # rep("Genotype likelihoods", nrow(mcmc_areas_data(model_worms_bi_smlh_gl))),
                                 rep("22 microsatellites", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_msat))),
                                 rep("15,051 SNPs", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_snp))))
-# rep("Genotype likelihoods", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_gl))))
 
 brms_primary_bi_area$response <- c(rep("Congenital defect", nrow(mcmc_areas_data(model_congenital_bi_smlh_msat))),
                                    rep("Congenital defect", nrow(mcmc_areas_data(model_congenital_bi_smlh_snp))),
-                                   # rep("Congenital", nrow(mcmc_areas_data(model_congenital_bi_smlh_gl))),
                                    rep("Bacteria", nrow(mcmc_areas_data(model_bacteria_bi_smlh_msat))),
                                    rep("Bacteria", nrow(mcmc_areas_data(model_bacteria_bi_smlh_snp))),
-                                   # rep("Bacteria", nrow(mcmc_areas_data(model_bacteria_bi_smlh_gl))),
                                    rep("Protozoa", nrow(mcmc_areas_data(model_protozoa_bi_smlh_msat))),
                                    rep("Protozoa", nrow(mcmc_areas_data(model_protozoa_bi_smlh_snp))),
-                                   # rep("Protozoa", nrow(mcmc_areas_data(model_protozoa_bi_smlh_gl))),
                                    rep("Trauma", nrow(mcmc_areas_data(model_trauma_bi_smlh_msat))),
                                    rep("Trauma", nrow(mcmc_areas_data(model_trauma_bi_smlh_snp))),
-                                   # rep("Trauma", nrow(mcmc_areas_data(model_trauma_bi_smlh_gl))),
                                    rep("Worms", nrow(mcmc_areas_data(model_worms_bi_smlh_msat))),
                                    rep("Worms", nrow(mcmc_areas_data(model_worms_bi_smlh_snp))),
-                                   # rep("Worms", nrow(mcmc_areas_data(model_worms_bi_smlh_gl))),
                                    rep("Malnutrition", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_msat))),
                                    rep("Malnutrition", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_snp))))
-# rep("Malnutrition", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_gl))))
 
 brms_primary_bi_area <- subset(brms_primary_bi_area, grepl("smlh", parameter)) #only select fixed effect beta estimates
 
@@ -442,9 +380,7 @@ ggplot(subset(data_long_long, !is.na(smlh)), aes(x = as.factor(measurement), y =
   theme(text = element_text(size = 24),
         legend.position = "none",
         strip.text.y.left = element_text(angle = 0, color = "black"),
-      #  axis.text.y = element_blank(),
         strip.background = element_blank(),
-       # axis.ticks.y = element_blank(),
         panel.border = element_blank(),
         panel.grid = element_blank(),
       panel.spacing = unit(0.5, "lines"),
@@ -465,44 +401,15 @@ ggsave(plot_1d_boxplots, file = "plots/final/Plot1d_boxplot_smlh.png", height = 
 
 
 # ### Combine 1a - 1d into Figure 1 ####
-# 
-# plot_top <- plot_grid(plot_1a_g2, plot_1b_blubber_weight, labels = c("a)", "b)"), align = "h", axis = "b",
-#                       label_fontface = "plain",label_size = 28)
-# plot_bottom <- plot_grid(plot_1c_binary_primary, plot_1d_boxplots, labels = c("c)", "d)"), align = "h", axis = "b",
-#                          label_fontface = "plain",label_size = 28)
-# 
-# plot_grid(plot_top, plot_bottom, ncol = 1, align = "hv", axis = "lb",
-#           rel_heights = c(1, 2)) -> plot1
-
 
 plot_left <- plot_grid(plot_1a_g2, plot_1c_binary_primary, labels = c("a)", "c)"), ncol = 1, align = "v", axis = "l",
                       label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
-plot_right <- plot_grid(plot_1b_blubber_weight_2, plot_1d_boxplots, labels = c("b)", "d)"), #align = "v", axis = "l",
+plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), align = "v", axis = "l",
                         ncol = 1, label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
 
-ggsave(plot1, file="plots/final/Plot1.png", height = 18, width = 18)
-
-# with plot b separate axes
-plot_right_b <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), align = "v", axis = "l",
-                        ncol = 1, label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
-
-plot_grid(plot_left, plot_right_b, nrow = 1, align = "lv", axis = "lb") -> plot1_b
-
-ggsave(plot1_b, file="plots/final/Plot1_b.png", height = 18, width = 20)
-
-# version two without boxplot
-
-plot_top_b <- plot_grid(plot_1a_g2, plot_1b_blubber_weight_2, labels = c("a)", "b)"), ncol = 1,
-                        align = "h", axis = "b")
-plot_bottom_b <- plot_grid(plot_1c_binary_primary,
-                           align = "h", axis = "b", labels = c("c)"))
-
-plot_grid(plot_top_b, plot_bottom_b,
-          ncol = 2) -> plot1_alternative
-
-ggsave(plot1_alternative, file="plots/final/Plot1_alternative.png", height = 18, width = 20)
+ggsave(plot1, file="plots/final/Plot1.png", height = 18, width = 20)
 
 #### Supplementary plot: effect size sMLH vs chromosome length ####
 ### Part A: worms ####
@@ -791,4 +698,4 @@ ggplot(pwrtest_all, aes(x = power, y = n, col = trait, group = trait))+
         axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0),
                                     color = "black")) -> plot_power
 
-ggsave(plot_power, file = "plots/final/Plot_power.png", width = 12, height=10)
+ggsave(plot_power, file = "plots/final/Supp_power.png", width = 12, height=10)
