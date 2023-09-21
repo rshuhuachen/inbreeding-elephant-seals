@@ -11,8 +11,8 @@ theme_set(theme_classic())
 
 ### load data
 load("data/clean/phenotypes.RData")
-smlh_snp <- fread("data/raw/74_Samples_sMLH.txt")
-smlh_gl <- fread("data/raw/GL_Heterozygosity_dataset.txt")
+smlh_snp <- fread("data/smlh/smlh_snp")
+smlh_gl <- fread("data/smlh/smlh_genotypelikelihoods")
 load(file="data/clean/phenotype_smlh.RData")
 
 #### Merge data ####

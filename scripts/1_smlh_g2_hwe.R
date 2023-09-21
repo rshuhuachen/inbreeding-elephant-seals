@@ -76,7 +76,7 @@ names(msat_clean)<- c("id", "hg3.6_a", "hg3.6_b",
                     "mang35_b" ,"a12_a","a12_b", "e04_a", "e04_b" ,"mang06_a" ,"mang06_b" ,"dh4.7_a", "dh4.7_b", "dh3.6_a", 
                     "dh3.6_b" ,"dh1.8_a",  "dh1.8_b","m11a_a" ,"m11a_b",  "bg_a",  "bg_b", "mang36_a", "mang36_b" )
 
-
+# drop ES2636, ES3196, FN-MA_010412, FN-MA-010712
 msat_clean <- subset(msat_clean, id != "ES2636" & id != "ES2695" & id != "ES2932" &
                             id != "ES2937" & id != "ES3196" &
                             id != "ES3256" & id != "FaMa010412" &

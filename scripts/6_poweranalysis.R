@@ -1,6 +1,6 @@
 # load libraries
 
-pacman::p_load(pwr, pwrss)
+pacman::p_load(pwr, pwrss, prismatic)
 
 ## set colors
 clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
@@ -13,19 +13,7 @@ clr_pheno["Congenital defect"] <- "#8AC6D0"
 
 # load phenotypes
 load("data/clean/phenotype_smlh.RData")
-data <- data %>% 
-  mutate(malnutrition_bi = case_when(primary_class == "Malnutrition" ~ 1,
-                                     TRUE ~ 0),
-         bacteria_bi = case_when(primary_class == "Bacterial infection" ~ 1,
-                                 TRUE ~ 0),
-         congenital_bi = case_when(primary_class == "Congenital defect" ~ 1,
-                                   TRUE ~ 0),
-         worms_bi = case_when(primary_class == "Otostrongylis" ~ 1,
-                              TRUE ~ 0),
-         protozoa_bi = case_when(primary_class == "Protozoa" ~ 1,
-                                 TRUE ~ 0),
-         trauma_bi = case_when(primary_class == "Trauma" ~ 1,
-                               TRUE ~ 0))
+
 # # power test for binary tests
 # data %>% group_by(malnutrition_bi) %>% summarise(n = n(),
 #                                                  mean_smlh = mean(smlh_snp, na.rm=T),
@@ -42,6 +30,9 @@ data <- data %>%
 #                alpha = 0.05,
 #                alternative = "not equal") -> mal
 
+#pwrss.f.reg(f2=0.1, m = 1, k = 3, power = 0.8, alpha = 0.05)
+#pwr.t.test(sig.level = 0.05, power = 0.8, type = "two.sample", alternative = "greater", d = 0.1)
+#pwr.t2n.test(n1 = 100, n2 = 40, d = 0.1, alternative = "two.sided")
 ### function
 
 power_test <- function(trait, pwr_increment, data){
@@ -91,35 +82,6 @@ pwrtest_all <- rbind(pwr_mal, pwr_bac, pwr_cong, pwr_worm, pwr_pro, pwr_trau)
 pwrtest_all$n.n1 <- as.numeric(as.character(pwrtest_all$n.n1))
 pwrtest_all$n.n2 <- as.numeric(as.character(pwrtest_all$n.n2))
 pwrtest_all$n <- pwrtest_all$n.n1 + pwrtest_all$n.n2
-## plotting
 
-ggplot(pwrtest_all, aes(x = power, y = n, col = trait, group = trait))+
-  geom_point(size=3)+ geom_line(lwd=1)+
-  scale_y_log10(breaks = c(100, 1000, 10000, 100000),
-                labels = c(expression("10"^2), expression("10"^3), 
-                           expression("10"^4), expression("10"^5)))+
-  scale_color_manual(values=clr_pheno)+
-  geom_hline(aes(yintercept = min(pwrtest_all$n[which(pwrtest_all$power == 0.8)])),
-             col = "red", linetype = "dashed")+
-  labs(x = "Statistical power", y = "Sample size required", col = "Category")+
-  theme_bw(base_family = "Arial")+
-  theme(text = element_text(size = 24, color = "black"),
-        axis.text.y = element_text(color = "black", hjust=0.95),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
-                                    color = "black"),
-        plot.subtitle = element_text(hjust = .5),
-        strip.background = element_blank(),
-        legend.position = "bottom",
-        panel.spacing = unit(2, "lines"),
-        axis.text.x = element_text(color = "black"),
-        plot.margin = margin(1,1,1,1, "cm"),
-        axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0),
-                                    color = "black")) -> plot_power
+save(pwrtest_all, file = "output/powertest_all.RData")
 
-ggsave(plot_power, file = "plots/final/Plot_power.png", width = 12, height=10)

@@ -42,9 +42,9 @@ save(class, file = "data/clean/phenotypes.RData")
 
 ### Add sMLH to the phenotypic dataset ####
 ### load data smlh
-smlh_msat <- fread("data/raw/msats_Samples_sMLH.txt")
-smlh_snp <- fread("data/raw/74_Samples_sMLH.txt")
-smlh_gl <- fread("data/raw/GL_Heterozygosity_dataset.txt")
+smlh_msat <- fread("data/smlh/smlh_genomewide_msats.txt")
+smlh_snp <- fread("data/smlh/smlh_snp.txt")
+smlh_gl <- fread("data/smlh/smlh_genotypelikelihoods.txt")
 
 ## clean ID's to same format
 smlh_gl$id <- gsub("-", "", smlh_gl$Sample_ID)

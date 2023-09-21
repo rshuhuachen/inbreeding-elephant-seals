@@ -3,11 +3,20 @@
 ### load packages ####
 pacman::p_load(brms, bayesplot, tidyverse, ggridges, prismatic, ggpubr, extrafont, cowplot, performance, data.table)
 
+### set colours categories ####
+clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
+  color() %>% 
+  set_names(nm = c("Worms", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
+
+#change brown and pink color
+clr_pheno["Protozoa"] <- "#0C0A3E"
+clr_pheno["Congenital defect"] <- "#8AC6D0"
+
 ##### Plot 1a g2 David #####
 
 # Import data
-g2<-read.table("data/raw/g2_10000.txt",h=F) # 15,051 SNPs g2
-g2_m<-read.table("data/raw/g2msats_10000.txt",h=F) # msats g2
+g2<-read.table("data/smlh/g2snp_10000.txt",h=F) # 15,051 SNPs g2
+g2_m<-read.table("data/smlh/g2msats_10000.txt",h=F) # msats g2
 #combine
 names(g2) <- "g2"
 names(g2_m) <- "g2"
@@ -354,14 +363,6 @@ brms_primary_bi$bottom <- brms_primary_bi$outer %>%
   ) %>%
   ungroup()
 
-## set colors
-clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
-  color() %>% 
-  set_names(nm = c("Worms", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
-
-#change brown and pink color
-clr_pheno["Protozoa"] <- "#0C0A3E"
-clr_pheno["Congenital defect"] <- "#8AC6D0"
 
 ## plot
 
@@ -403,20 +404,6 @@ ggsave(plot_1c_binary_primary, file = "plots/final/Plot1c_primary_bayes_binary.p
 ##### Plot 1d: boxplots of raw data ####
 
 load("data/clean/phenotype_smlh.RData")
-
-data <- data %>% 
-  mutate(malnutrition_bi = case_when(primary_class == "Malnutrition" ~ 1,
-                                     TRUE ~ 0),
-         bacteria_bi = case_when(primary_class == "Bacterial infection" ~ 1,
-                                 TRUE ~ 0),
-         congenital_bi = case_when(primary_class == "Congenital defect" ~ 1,
-                                   TRUE ~ 0),
-         worms_bi = case_when(primary_class == "Otostrongylis" ~ 1,
-                              TRUE ~ 0),
-         protozoa_bi = case_when(primary_class == "Protozoa" ~ 1,
-                                 TRUE ~ 0),
-         trauma_bi = case_when(primary_class == "Trauma" ~ 1,
-                               TRUE ~ 0))
 
 #transform to long
 data_select <- data[,c("id", "smlh_msat", "smlh_snp", 
@@ -517,7 +504,8 @@ plot_grid(plot_top_b, plot_bottom_b,
 
 ggsave(plot1_alternative, file="plots/final/Plot1_alternative.png", height = 18, width = 20)
 
-#### Plot 2a: per chromosome worms ####
+#### Supplementary plot: effect size sMLH vs chromosome length ####
+### Part A: worms ####
 load(file = "output/models_snp_worms_chromosome_bayes.RData")
 
 #combine
@@ -552,39 +540,7 @@ data_chr_worms$bottom <- data_chr_worms$outer %>%
   ungroup()
 
 
-## plot
-ggplot(data = data_chr_worms$outer) + aes(x = .data$x, y = reorder(.data$parameter, size)) + 
-  geom_ridgeline(aes(scale = 0.4, height = scaled_density),fill = "#d95f02", alpha = 0.8)+
-  geom_ridgeline(aes(scale = 0.4, height = -scaled_density),fill = "#d95f02", alpha = 0.8,  min_height = -10)+
-  geom_segment(data = brms_chr_worms_interval, aes(x = l, xend = h, yend = parameter), col = "black", linewidth=3)+
-  geom_segment(data = brms_chr_worms_interval, aes(x = ll, xend = hh, yend = parameter), col = "black")+
-  geom_point(data = brms_chr_worms_interval, aes(x = m, y = parameter), color="black", fill = "grey60", shape=21, size = 4) + 
-#  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash", lwd = 1)+
-  labs(x = "Standardised estimate", y="Chromosome")+
-  theme_bw(base_family = "Arial")+
-  xlim(-2, 2)+
-  theme(axis.text = element_text(size=20, color = "black"),
-        axis.title = element_text(size=22),
-        title = element_text(size=26),
-        legend.text = element_text(size = 22),
-        text = element_text(size = 22),
-        plot.margin = unit(c(0.5, 0.2, 0.1, 0.2),"inches"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        plot.subtitle = element_text(hjust = .5),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0),
-                                    color = "black"),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0),
-                                    color = "black"),
-        strip.background = element_blank(),
-        legend.position = "none") +
-  coord_flip() -> perchr_worms
-
-#### Plot 2b: per chromosome bacteria ####
+### Part B: bacteria ####
 load(file = "output/models_snp_bacteria_chromosome_bayes.RData")
 
 #combine
@@ -618,65 +574,28 @@ data_chr_bacteria$bottom <- data_chr_bacteria$outer %>%
   ) %>%
   ungroup()
 
-## plot
 
-ggplot(data = data_chr_bacteria$outer) + aes(x = .data$x, y = reorder(.data$parameter, size)) + 
-  geom_ridgeline(aes(scale = 0.4, height = scaled_density),fill = "#d95f02", alpha = 0.8)+
-  geom_ridgeline(aes(scale = 0.4, height = -scaled_density),fill = "#d95f02",  min_height = -10, alpha = 0.8)+
-  geom_segment(data = brms_chr_bacteria_interval, aes(x = l, xend = h, yend = parameter), col = "black", linewidth=3)+
-  geom_segment(data = brms_chr_bacteria_interval, aes(x = ll, xend = hh, yend = parameter), col = "black")+
-  geom_point(data = brms_chr_bacteria_interval, aes(x = m, y = parameter), color="black", fill = "grey60", shape=21, size = 4) + 
-#  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash", lwd = 1)+
-  labs(x = "Standardised beta coefficient", y="Chromosome")+
-  xlim(-2, 2)+
-  theme_bw(base_family = "Arial")+
-  theme(axis.text = element_text(size=20, color = "black"),
-        axis.title = element_text(size=22),
-        title = element_text(size=26),
-        legend.text = element_text(size = 22),
-        text = element_text(size = 22),
-        plot.margin = unit(c(0.5, 0.2, 0.1, 0.2),"inches"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        plot.subtitle = element_text(hjust = .5),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0),
-                                    color = "black"),
-        strip.background = element_blank(),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0),
-                                    color = "black"),
-        legend.position = "none") +
-  coord_flip() -> perchr_bacteria
-
-#### Combine plot 2a + 2b into Figure 2 (supps) ####
-plot_grid(perchr_worms, perchr_bacteria, labels = c("a) Worms", "b) Bacteria"),
-          label_size=24, label_fontface = "plain",
-          nrow=2) -> plot_perchr
-
-ggsave(plot_perchr, filename = "plots/final/Supp_perchr_wormsbacteria.png", height = 18, width = 14)
-
-#### Plot 2c (chr size vs standardized estimate) ) ####
-
+### Combine in plot ####
 
 ## get chr sizes
-chrsize <- fread("data/raw/sequence_report.tsv")
+chrsize <- fread("data/raw/elephant_seal_sequence_report.tsv")
 chrsize <- chrsize %>% select(c("Chromosome name", "Seq length"))
 names(chrsize) <- c("chr", "size")
 
 ## add column phenotype
 brms_chr_worms_interval$trait <- "Worms"
 brms_chr_bacteria_interval$trait <- "Bacteria"
+
 ## combine the two in a new df
 brms_chr_interval_combined <- rbind(brms_chr_worms_interval, brms_chr_bacteria_interval)
 
 ## join with chr size
 brms_chr_interval_combined <- left_join(brms_chr_interval_combined, chrsize[,c("chr", "size")], by = c("parameter" = "chr"))
 
-## to Mb
+## convert to Mb
 brms_chr_interval_combined$size_mb <- brms_chr_interval_combined$size/1000000
+
+## relevent to get the right order for plotting
 data_long_long$condition <- fct_relevel(data_long_long$condition,
                                         c("Worms", "Bacteria",
                                           "Protozoa","Trauma", 
@@ -691,17 +610,11 @@ r2(chrsize_effect_worms)
 chrsize_effect_bacteria <- lm(m ~ size, data = subset(brms_chr_interval_combined, trait == "Bacteria"))
 r2(chrsize_effect_bacteria)
 
-#SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA
+#formula to display statistics on the plot
+# SOURCE: https://groups.google.com/forum/#!topic/ggplot2/1TgH-kG5XMA
 # edited by https://stackoverflow.com/questions/7549694/add-regression-line-equation-and-r2-on-graph
+# further adapted
 
-
-lm_eqn <- function(df){
-  m <- lm(m ~ size, df);
-  eq <- substitute(italic(y) == a + b %.% italic(x)*",", 
-                   list(a = format(unname(coef(m)[1]), digits = 2),
-                        b = format(unname(coef(m)[2]), digits = 2)))
-  as.character(as.expression(eq));
-}
 lm_stat <- function(df){
   m <- lm(m ~ size, df);
   eq <- substitute(~~italic(r)^2~"="~r2*","~~italic("p")~~"="~p, 
@@ -710,23 +623,12 @@ lm_stat <- function(df){
   as.character(as.expression(eq));
 }
 
-text_worms_a <- lm_eqn(subset(brms_chr_interval_combined, trait == "Worms"))
-text_worms_a <- "italic(y) == \"0.11\" - \"4.4e-10\" %.% italic(x) * \",\"" #manually replace +- with -
-text_worms_b <- lm_stat(subset(brms_chr_interval_combined, trait == "Worms"))
-#text_worms <- paste(text_worms_a, "\n", text_worms_b)
+text_worms <- lm_stat(subset(brms_chr_interval_combined, trait == "Worms"))
+text_bacteria <- lm_stat(subset(brms_chr_interval_combined, trait == "Bacteria"))
 
-text_bacteria_a <- lm_eqn(subset(brms_chr_interval_combined, trait == "Bacteria"))
-text_bacteria_b <- lm_stat(subset(brms_chr_interval_combined, trait == "Bacteria"))
-#text_bacteria <- paste(text_bacteria_a, "\n", text_bacteria_b)
-
-ann_text_a <- data.frame(size_mb = c(mean(brms_chr_interval_combined$size_mb), mean(brms_chr_interval_combined$size_mb)),
-                                m = c(1.5, 1.5),
-                                lab = c(text_worms_a, text_bacteria_a),
-                                trait = factor(c("Worms", "Bacteria")))
-
-ann_text_b <- data.frame(size_mb = c(mean(brms_chr_interval_combined$size_mb), mean(brms_chr_interval_combined$size_mb)),
+ann_text <- data.frame(size_mb = c(mean(brms_chr_interval_combined$size_mb), mean(brms_chr_interval_combined$size_mb)),
                        m = c(1.5, 1.5),
-                       lab = c(text_worms_b, text_bacteria_b),
+                       lab = c(text_worms, text_bacteria),
                        trait = factor(c("Worms", "Bacteria")))
 # plot
 
@@ -759,90 +661,13 @@ ggplot(brms_chr_interval_combined, aes(x = size_mb, y = m))+
                                     color = "black"))+
   facet_wrap(~trait) +
 #  geom_text(data=ann_text_a, label = ann_text_a$lab, parse=T, size = 5) +
-  geom_text(data=ann_text_b, label = ann_text_b$lab, parse=T, size = 5) -> plot_chrsize
+  geom_text(data=ann_text, label = ann_text$lab, parse=T, size = 5) -> plot_chrsize
 plot_chrsize
 ggsave(plot_chrsize, filename = "plots/final/Supp_chrsize_wormsbacteria.png", height = 10, width = 14)
 
 
-##### Plot 3a (supps) chromosome 16 - worms ######
 
-load(file = "output/models_chr16_worms_summary.RData")
-
-### plotting 
-#scatter plot
-
-start_mhc <- models_chr16_worms_df %>% select(c("window_real_clean", "mhc")) %>% 
-  filter(!is.na(mhc)) %>% slice(which.min(window_real_clean))
-end_mhc <- models_chr16_worms_df %>% select(c("window_real_clean", "mhc")) %>% 
-  filter(!is.na(mhc)) %>% slice(which.max(window_real_clean))
-
-ggplot(models_chr16_worms_df) + 
-  geom_point(aes(x = window_real_clean, y = Std_Coefficient, col = qval), alpha = 0.5) +
-  geom_rect(aes(xmin = start_mhc$window_real_clean, xmax = end_mhc$window_real_clean, ymin = -Inf, ymax = Inf), alpha  = 0.8, fill = "orange")+
-  geom_smooth(aes(x = window_real_clean, y = Std_Coefficient), col = "#6495ED") +
-  ylim(-4, 4)+
-  geom_hline(yintercept=0, col = "#777777", linetype=3)+
-  scale_color_gradientn(colours = c("#1346A4", "#1A5DDB", "#6495ED", "#B6CDF6", "#DBE6FB"),
-                        breaks = c(0,0.25,0.5,0.75,1),
-                        values = c(0,0.25,0.5,0.75,1),
-                        limits = c(0,1))+
-  theme_bw(base_family = "Arial")+
-  labs(x = "Sliding window on chromosome 16", y = "Standardized coefficient", col = "q-value")+
-  theme(text = element_text(size = 16, family = "Arial"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        plot.margin = unit(c(0.1, 0.2, 0.1, 0.2),"inches"),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        axis.text = element_text(color = "black"),
-        plot.subtitle = element_text(hjust = .5),
-        strip.background = element_blank()) -> chr16_worms
-
-##### Plot 3b (supps) chromosome 16 - bacteria ######
-load(file = "output/models_chr16_bacteria_summary.RData")
-
-### plotting 
-#scatter plot
-
-start_mhc <- models_chr16_bacteria_df %>% select(c("window_real_clean", "mhc")) %>% 
-  filter(!is.na(mhc)) %>% slice(which.min(window_real_clean))
-end_mhc <- models_chr16_bacteria_df %>% select(c("window_real_clean", "mhc")) %>% 
-  filter(!is.na(mhc)) %>% slice(which.max(window_real_clean))
-
-ggplot(models_chr16_bacteria_df) + 
-  geom_point(aes(x = window_real_clean, y = Std_Coefficient, col = qval), alpha = 0.5) +
-  geom_rect(aes(xmin = start_mhc$window_real_clean, xmax = end_mhc$window_real_clean, ymin = -Inf, ymax = Inf), alpha  = 0.8, fill = "orange")+
-  geom_smooth(aes(x = window_real_clean, y = Std_Coefficient), col = "#6495ED") +
-  ylim(-4, 4)+
-  geom_hline(yintercept=0, col = "#777777", linetype=3)+
-  scale_color_gradientn(colours = c("#1346A4", "#1A5DDB", "#6495ED", "#B6CDF6", "#DBE6FB"),
-                        breaks = c(0,0.25,0.5,0.75,1),
-                        values = c(0,0.25,0.5,0.75,1),
-                        limits = c(0,1))+
-  theme_bw(base_family = "Arial")+
-  labs(x = "Sliding window on chromosome 16", y = "Standardized coefficient", col = "q-value")+
-  theme(text = element_text(size = 16, family = "Arial"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        axis.text = element_text(color = "black"),
-        plot.subtitle = element_text(hjust = .5),
-        plot.margin = unit(c(0.1, 0.2, 0.1, 0.2),"inches"),
-        strip.background = element_blank()) -> chr16_bacteria
-chr16_bacteria
-##### Combine plot 3a + 3b (supps) chromosome 16 into plot 3 (supps) ######
-
-plot_grid(chr16_worms, chr16_bacteria, labels = c("a) Worms", "b) Bacteria"), ncol = 1,
-          label_size = 24, label_fontface = "plain") -> plot_chr16
-
-ggsave(plot_chr16, file="plots/final/Supp_chr16_wormsbacteria.png", height = 12, width = 12)
-
-##### Plot 4 (supps): Primary classification bayes categorical #####
+##### Supplementary plot: Primary classification bayes categorical #####
 ### load data ###
 load(file = "output/brms_primaryclass_smlh_msat.RData")
 load(file = "output/brms_primaryclass_smlh_snp.RData")
@@ -932,154 +757,38 @@ ggplot(data = data_primary$outer) + aes(x = .data$x, y = fct_relevel(.data$param
 
 ggsave(plot_1b_categorical_primary, filename = "plots/final/Supp_primary_bayes_categorical.png", width=10, height=10)
 
-###### Old plots #####
+#### Supplementary plot: Power test #####
+## plotting
 
-###### Plot 1: case/control msat snp #####
+load(file = "output/powertest_all.RData")
 
-### load data ###
-load(file = "output/brms_case_smlh_msat.RData")
-load(file = "output/brms_case_smlh_snp.RData")
-
-### combine results in one df
-brms_case_interval <- rbind(mcmc_intervals_data(brm_case_msat, prob =0.8, prob_outer = 0.9),
-                            mcmc_intervals_data(brm_case_snp, prob =0.8, prob_outer = 0.9))
-
-brms_case_interval$model <- c(rep("22 microsatellites", nrow(mcmc_intervals_data(brm_case_msat))),
-                              rep("SNPs", nrow(mcmc_intervals_data(brm_case_snp))))
-brms_case_interval <- subset(brms_case_interval, grepl("smlh", parameter))
-
-brms_case_areas <- rbind(mcmc_areas_data(brm_case_msat),
-                         mcmc_areas_data(brm_case_snp))
-
-brms_case_areas$model <- c(rep("22 microsatellites", nrow(mcmc_areas_data(brm_case_msat))),
-                           rep("SNPs", nrow(mcmc_areas_data(brm_case_snp))))
-brms_case_areas <- subset(brms_case_areas, grepl("smlh", parameter)) #only select fixed effect beta estimates
-
-# split by interval
-datas <- split(brms_case_areas, brms_case_areas$interval)
-
-datas$bottom <- datas$outer %>%
-  group_by(!!! groups) %>%
-  summarise(
-    ll = min(.data$x),
-    hh = max(.data$x),
-    .groups = "drop_last"
-  ) %>%
-  ungroup()
-
-#gives error but still works
-
-ggplot(data = datas$outer) + aes(x = .data$x, y = .data$model) + 
-  labs(title=paste0("Posterior estimates for the effect size of sMLH on Case / Control"),
-       subtitle= "Thick lines are 80% CI and thin lines 95% CI ", x = "Standardised estimate") + 
-  geom_ridgeline(aes(scale = 0.4, height = scaled_density), fill = "gray80")+
-  geom_ridgeline(aes(scale = 0.4, height = -scaled_density), fill = "gray80", min_height = -10)+
-  geom_segment(data = brms_case_interval, aes(x = l, xend = h, yend = model), col = "gray60", size=3)+
-  geom_segment(data = brms_case_interval, aes(x = ll, xend = hh, yend = model), col = "gray60")+
-  geom_point(data = brms_case_interval, aes(x = m, y = model), color="black", fill = "black", shape=21, size = 4) + 
-  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
+ggplot(pwrtest_all, aes(x = power, y = n, col = trait, group = trait))+
+  geom_point(size=3)+ geom_line(lwd=1)+
+  scale_y_log10(breaks = c(100, 1000, 10000, 100000),
+                labels = c(expression("10"^2), expression("10"^3), 
+                           expression("10"^4), expression("10"^5)))+
+  scale_color_manual(values=clr_pheno)+
+  geom_hline(aes(yintercept = min(pwrtest_all$n[which(pwrtest_all$power == 0.8)])),
+             col = "red", linetype = "dashed")+
+  labs(x = "Statistical power", y = "Sample size required", col = "Category")+
   theme_bw(base_family = "Arial")+
-  theme(axis.title.x = element_blank(),
-        axis.text = element_text(size=20, color = "black"),
-        axis.title = element_text(size=22),
-        title = element_text(size=26),
-        legend.text = element_text(size = 22),
-        plot.margin = unit(c(0.1, 0.2, 0.1, 0.2),"inches"),
+  theme(text = element_text(size = 24, color = "black"),
+        axis.text.y = element_text(color = "black", hjust=0.95),
         panel.border = element_blank(),
         panel.grid = element_blank(),
         axis.line = element_line(colour = "black",
                                  linewidth = 0.3),
         axis.ticks = element_line(colour = "black",
                                   linewidth = 0.3),
-        plot.subtitle = element_text(hjust = .5),
-        strip.background = element_blank())+
-  coord_flip() -> plot_a
-
-plot_a +
-  theme(plot.title =  element_blank(),
-        plot.subtitle = element_blank()) -> plot_a_ms
-
-ggsave(plot_a_ms, filename = "plots/Plot1_casecontrol_bayes.png", width=8, height=8)
-
-
-#### Plot 2 (supps): per chromosome case control ####
-load(file = "output/models_gl_casecontrol_chromosome_bayes.RData")
-load(file = "output/models_snp_casecontrol_chromosome_bayes.RData")
-
-#combine
-brms_chr_interval <- mcmc_intervals_data(models_snp_bayes[[1]][[1]], prob_outer = 0.95, prob = 0.8)
-for (i in 2:17){brms_chr_interval <- rbind(brms_chr_interval,
-                                           mcmc_intervals_data(models_snp_bayes[[1]][[i]]))}
-brms_chr_interval <- subset(brms_chr_interval, grepl("chr", parameter))
-
-brms_chr_areas <- mcmc_areas_data(models_snp_bayes[[1]][[1]])
-for (i in 2:17){brms_chr_areas <- rbind(brms_chr_areas,
-                                        mcmc_areas_data(models_snp_bayes[[1]][[i]]))}
-brms_chr_areas <- subset(brms_chr_areas, grepl("chr", parameter))
-
-#rename
-brms_chr_interval$parameter <- gsub("b_scalesmlh_chr", "", brms_chr_interval$parameter)
-brms_chr_areas$parameter <- gsub("b_scalesmlh_chr", "", brms_chr_areas$parameter)
-
-brms_chr_interval$parameter <- as.factor(as.numeric(brms_chr_interval$parameter ))
-brms_chr_areas$parameter <- as.factor(as.numeric(brms_chr_areas$parameter ))
-
-# split by interval
-data_chr <- split(brms_chr_areas, brms_chr_areas$interval)
-
-data_chr$bottom <- data_chr$outer %>%
-  group_by(!!! groups) %>%
-  summarise(
-    ll = min(.data$x),
-    hh = max(.data$x),
-    .groups = "drop_last"
-  ) %>%
-  ungroup()
-
-## plot
-
-ggplot(data = data_chr$outer) + aes(x = .data$x, y = .data$parameter) + 
-  geom_ridgeline(aes(scale = 0.4, height = scaled_density),fill = "grey80")+
-  geom_ridgeline(aes(scale = 0.4, height = -scaled_density),fill = "grey80",  min_height = -10)+
-  geom_segment(data = brms_chr_interval, aes(x = l, xend = h, yend = parameter), col = "black", linewidth=3)+
-  geom_segment(data = brms_chr_interval, aes(x = ll, xend = hh, yend = parameter), col = "black")+
-  geom_point(data = brms_chr_interval, aes(x = m, y = parameter), color="black", fill = "grey60", shape=21, size = 4) + 
-  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
-  labs(x = "Standardised estimate", y="Chromosome")+
-  theme_bw(base_family = "Arial")+
-  theme(axis.text = element_text(size=20, color = "black"),
-        axis.title = element_text(size=22),
-        title = element_text(size=26),
-        legend.text = element_text(size = 22),
-        text = element_text(size = 22),
-        plot.margin = unit(c(0.1, 0.2, 0.1, 0.2),"inches"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
+        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
+                                    color = "black"),
         plot.subtitle = element_text(hjust = .5),
         strip.background = element_blank(),
-        legend.position = "none") +
-  coord_flip()
+        legend.position = "bottom",
+        panel.spacing = unit(2, "lines"),
+        axis.text.x = element_text(color = "black"),
+        plot.margin = margin(1,1,1,1, "cm"),
+        axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0),
+                                    color = "black")) -> plot_power
 
-#### effectsize instead
-chr_effectsize <- models_snp_bayes[[3]]
-ggplot(chr_effectsize) + geom_point(aes(x = Parameter, y = Std_Median), size = 3, fill = "#6495ED", shape=21) + 
-  ylim(-1.5, 1.5) + geom_hline(yintercept=0, col = "#777777", linetype=3) + 
-  geom_errorbar(aes(x = Parameter, ymin = CI_low, ymax = CI_high), col = "#777777") +
-  labs(x = "Chromosome", y = "Standardized coefficient", title = "Effect size of sMLH on case/control",
-       subtitle = "With 95% CI, based on 15,051 SNPs SNPs") +
-  theme_bw(base_family = "Arial")+
-  theme(text = element_text(size = 16, family = "Arial"),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        axis.line = element_line(colour = "black",
-                                 linewidth = 0.3),
-        axis.ticks = element_line(colour = "black",
-                                  linewidth = 0.3),
-        axis.text = element_text(color = "black"),
-        plot.subtitle = element_text(hjust = .5),
-        strip.background = element_blank()) 
-
+ggsave(plot_power, file = "plots/final/Plot_power.png", width = 12, height=10)
