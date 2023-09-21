@@ -6,9 +6,9 @@ pacman::p_load(dplyr, inbreedR, tidyr)
 
 ################ Microsatellites
 
-msats<-read.table("raw/msats_genotypes.txt",h=F,row.names=1)
+msats<-read.table("data/raw/msats_genotypes.txt",h=F,row.names=1)
 msats[msats==0]<-NA
-outm<-read.table("raw/msats_dataset_description.txt",h=T)
+outm<-read.table("data/raw/msats_dataset_description.txt",h=T)
 outm$Animal_ID <- gsub("-","",outm$Animal_ID)
 
 #reformat into inbreedR format
