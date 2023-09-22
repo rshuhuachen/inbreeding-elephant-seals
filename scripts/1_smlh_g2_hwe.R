@@ -8,6 +8,11 @@ pacman::p_load(readxl, inbreedR, tidyverse, adegenet, pegas)
 
 msat_raw <- read_excel("data/raw/NES dataset 19_04_23.xlsx", sheet = 2, skip = 2) #raw microsatellites, unfiltered
 
+# correct ID's
+msat_raw$ID[which(msat_raw$ID == "FaMa012912")] <- "FnMa012912"
+msat_raw$ID[which(msat_raw$ID == "ES2932")] <- "ES2923"
+msat_raw$ID[which(msat_raw$ID == "ES2937")] <- "ES2737"
+
 #### Testing for HWE ####
 #### Transform MSAT file to structure format ####
 # raw file is in format one row per ID, only 1/2 msats are named
@@ -76,6 +81,10 @@ names(msat_clean)<- c("id", "hg3.6_a", "hg3.6_b",
                       "mang35_b" ,"a12_a","a12_b", "e04_a", "e04_b" ,"mang06_a" ,"mang06_b" ,"dh4.7_a", "dh4.7_b", "dh3.6_a", 
                       "dh3.6_b" ,"dh1.8_a",  "dh1.8_b","m11a_a" ,"m11a_b",  "bg_a",  "bg_b", "mang36_a", "mang36_b" )
 
+# correct ID's
+msat_clean$id[which(msat_clean$id == "FaMa012912")] <- "FnMa012912"
+msat_clean$id[which(msat_clean$id == "ES2932")] <- "ES2923"
+msat_clean$id[which(msat_clean$id == "ES2937")] <- "ES2737"
 
 ## Change formats to be loaded into inbreedR (binary where rownames are id's and no populations)
 
@@ -94,7 +103,7 @@ sMLH_df <- as.data.frame(sMLH)
 colnames(sMLH_df)[1] <- "sMLH"
 sMLH_df <- tibble::rownames_to_column(sMLH_df, "id")
 
-#exclude some individuals due to low phenotypic uncertainty
+#exclude some individuals due to phenotypic uncertainty
 exclude <- c("ES2937", "ES2636", "ES2932","FaMa012912","ES3196","FaMa010712","FaMa010412")
 `%!in%` = Negate(`%in%`)
 sMLH_df <- subset(sMLH_df, id %!in% exclude)

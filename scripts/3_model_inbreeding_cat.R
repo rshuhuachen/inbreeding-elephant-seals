@@ -96,3 +96,54 @@ for (i in 1:length(list_models)){
   dev.off()
   i = i+1
 }
+
+
+#### Supplementary analysis: categorical model #####
+#### Categorical: primary classification ####
+
+prior <- c(set_prior("normal(-1,1)", dpar = "muBacterialinfection"),
+           set_prior("normal(0,1)", dpar = "muCongenitaldefect"),
+           set_prior("normal(0,1)", dpar = "muMalnutrition"),
+           set_prior("normal(-1,1)", dpar = "muOtostrongylis"),
+           set_prior("normal(-1,1)", dpar = "muProtozoa"))
+
+brm_primary_msat <- brm(relevel(primary_class, ref = "Trauma") ~ scale(smlh_msat) + (1|Sex) + (1|Year) + (1|admit_month),
+                        family= categorical,data = data, 
+                        iter = 100000, 
+                        thin = 100,
+                        chains = 3,
+                        prior=prior)
+
+save(brm_primary_msat, file = "output/brms_primaryclass_smlh_msat.RData")
+
+brm_primary_snp <- brm(relevel(primary_class, ref = "Trauma") ~ scale(smlh_snp) + (1|Sex) + (1|Year) + (1|admit_month),
+                       family= categorical,data = data, 
+                       iter = 100000, 
+                       thin = 100,
+                       chains = 3,
+                       prior=prior)
+save(brm_primary_snp, file = "output/brms_primaryclass_smlh_snp.RData")
+
+for (i in c(brm_primary_msat, brm_primary_snp)){
+  pdf(file = paste0("plots/diagnostics/diagnose_", names(list_models[i]), ".pdf"))
+  # extract beta's for some plots
+  betas <- subset(variables(list_models[[i]]), grepl("b_", variables(list_models[[i]])) & !grepl("_Intercept", variables(list_models[[i]])))
+  #autocor
+  print(mcmc_acf(list_models[[i]], lags = 10))
+  #trace betas
+  print(mcmc_trace(list_models[[i]], pars = c(betas)))
+  #trace all
+  print(mcmc_trace(list_models[[i]]))
+  
+  #rhat
+  print(mcmc_rhat(brms::rhat(list_models[[i]])))
+  #neff
+  print(mcmc_neff(neff_ratio(list_models[[i]])))
+  
+  # areas
+  print(mcmc_areas(list_models[[i]], pars = c(betas)))
+  
+  dev.off()
+  i = i+1
+}
+

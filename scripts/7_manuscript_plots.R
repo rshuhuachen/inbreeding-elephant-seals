@@ -198,9 +198,9 @@ title <- ggdraw() +
   )
     
   
-plot_grid(plot_1b_weight, plot_1b_blubber, nrow = 2, align = "hv", axis = "lb", rel_heights = c(1, 0.9)) -> plot_1b_blubber_weight_2
-plot_grid(title, plot_1b_blubber_weight_2, rel_widths = c(0.1, 1)) -> plot_1b_blubber_weight_2 # add title
-ggsave(plot_1b_blubber_weight_2, filename = "plots/final/Plot1b_other_bayes.png", width=10, height=8)
+plot_grid(plot_1b_weight, plot_1b_blubber, nrow = 2, align = "hv", axis = "lb", rel_heights = c(1, 0.9)) -> plot_1b_blubber_weight
+plot_grid(title, plot_1b_blubber_weight, rel_widths = c(0.1, 1)) -> plot_1b_blubber_weight # add title
+ggsave(plot_1b_blubber_weight, filename = "plots/final/Plot1b_other_bayes.png", width=10, height=8)
 
 ##### Plot 1c: Primary classification presence/absence bayes #####
 #load data

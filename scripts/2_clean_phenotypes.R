@@ -49,7 +49,7 @@ smlh_gl <- fread("data/smlh/smlh_genotypelikelihoods.txt")
 smlh_gl$id <- gsub("-", "", smlh_gl$Sample_ID)
 
 ## combine data into a single data frame
-data <- left_join(class, smlh_msat[,c("Animal_ID", "sMLH")], by = c("id" = "Animal_ID")) %>%
+data <- left_join(class, smlh_msat[,c("id", "sMLH")], by = c("id")) %>%
   left_join(smlh_snp[,c("ID", "sMLH_GenomeWide")], by = c("id" = "ID")) %>%
   left_join(smlh_gl[,c("id", "GL_Het")], by = c("id" = "id"))
 
