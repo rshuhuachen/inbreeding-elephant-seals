@@ -404,7 +404,7 @@ ggsave(plot_1d_boxplots, file = "plots/final/Plot1d_boxplot_smlh.png", height = 
 
 plot_left <- plot_grid(plot_1a_g2, plot_1c_binary_primary, labels = c("a)", "c)"), ncol = 1, align = "v", axis = "l",
                       label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
-plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), align = "v", axis = "l",
+plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), align = "v", 
                         ncol = 1, label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
