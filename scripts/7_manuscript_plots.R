@@ -69,10 +69,10 @@ load(file = "output/brms_blubber_smlh_msat.RData")
 load(file = "output/brms_blubber_smlh_snp.RData")
 
 #combine
-brms_other_interval <- rbind(mcmc_intervals_data(brm_weight_msat, prob =0.8, prob_outer = 0.9),
-                             mcmc_intervals_data(brm_weight_snp, prob =0.8, prob_outer = 0.9),
-                             mcmc_intervals_data(brm_blubber_msat, prob =0.8, prob_outer = 0.9),
-                             mcmc_intervals_data(brm_blubber_snp, prob =0.8, prob_outer = 0.9))
+brms_other_interval <- rbind(mcmc_intervals_data(brm_weight_msat, prob =0.8, prob_outer = 0.95),
+                             mcmc_intervals_data(brm_weight_snp, prob =0.8, prob_outer = 0.95),
+                             mcmc_intervals_data(brm_blubber_msat, prob =0.8, prob_outer = 0.95),
+                             mcmc_intervals_data(brm_blubber_snp, prob =0.8, prob_outer = 0.95))
 
 brms_other_interval$model <- c(rep("22 microsatellites", nrow(mcmc_intervals_data(brm_weight_msat))),
                                rep("15,051 SNPs", nrow(mcmc_intervals_data(brm_weight_snp))),
@@ -219,18 +219,18 @@ load( file = "output/brms_binaryprimary_worms_msat.RData")
 load( file = "output/brms_binaryprimary_worms_snp.RData")
 
 ### combine results in one df
-brms_primary_bi_interval <- rbind(mcmc_intervals_data(model_congenital_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_congenital_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_bacteria_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_bacteria_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_protozoa_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_protozoa_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_trauma_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_trauma_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_worms_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_worms_bi_smlh_snp, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_malnutrition_bi_smlh_msat, prob =0.8, prob_outer = 0.9),
-                                  mcmc_intervals_data(model_malnutrition_bi_smlh_snp, prob =0.8, prob_outer = 0.9))
+brms_primary_bi_interval <- rbind(mcmc_intervals_data(model_congenital_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_congenital_bi_smlh_snp, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_bacteria_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_bacteria_bi_smlh_snp, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_protozoa_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_protozoa_bi_smlh_snp, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_trauma_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_trauma_bi_smlh_snp, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_worms_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_worms_bi_smlh_snp, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_malnutrition_bi_smlh_msat, prob =0.8, prob_outer = 0.95),
+                                  mcmc_intervals_data(model_malnutrition_bi_smlh_snp, prob =0.8, prob_outer = 0.95))
 # mcmc_intervals_data(model_malnutrition_bi_smlh_gl, prob =0.8, prob_outer = 0.9))
 
 brms_primary_bi_interval <- subset(brms_primary_bi_interval, grepl("smlh", parameter))
@@ -580,8 +580,8 @@ load(file = "output/brms_primaryclass_smlh_msat.RData")
 load(file = "output/brms_primaryclass_smlh_snp.RData")
 
 ### combine results in one df
-brms_primary_interval <- rbind(mcmc_intervals_data(brm_primary_msat, prob =0.8, prob_outer = 0.9),
-                               mcmc_intervals_data(brm_primary_snp, prob =0.8, prob_outer = 0.9))
+brms_primary_interval <- rbind(mcmc_intervals_data(brm_primary_msat, prob =0.8, prob_outer = 0.95),
+                               mcmc_intervals_data(brm_primary_snp, prob =0.8, prob_outer = 0.95))
 
 brms_primary_interval$model <- c(rep("22 microsatellites", nrow(mcmc_intervals_data(brm_primary_msat))),
                                  rep("15,051 SNPs", nrow(mcmc_intervals_data(brm_primary_snp))))
