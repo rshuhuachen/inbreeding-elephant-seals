@@ -32,6 +32,8 @@ clr_method <- color(c("#7570b3", "#DEC102")) %>% #original purple and yellow ins
 clr_method <- color(c("grey60", "grey80")) %>% #kosmas grey
   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 
+clr_method <- color(c("#253741", "#7198AD")) %>% #blues more contrast
+  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 ##### Plot 1a g2 David #####
 
 # Import data
@@ -429,7 +431,7 @@ plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
 
-ggsave(plot1, file="plots/final/Plot1_v9.png", height = 18, width = 20)
+ggsave(plot1, file="plots/final/Plot1_v10.png", height = 18, width = 20)
 
 #### Supplementary plot: effect size sMLH vs chromosome length ####
 ### Part A: worms ####
