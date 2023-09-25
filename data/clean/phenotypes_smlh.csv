@@ -15,7 +15,7 @@ ES2667,Berit,1,1,NA,pup,male,2007-04-04,1,39,35,died in treatment,1,Malnutrition
 ES2701,Bravery,NA,NA,NA,pup,male,2007-05-29,0.7,38.5,39.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,May,2007,0.971693543834761,NA,NA,0,1,0,0,0,0,0,5,0
 ES2713,Thunder Strike,1,1,1,pup,male,2008-01-05,0.4,40,40,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,January,2008,0.755761645204814,1.136617107,9.31202872176942e-05,0,1,0,0,0,0,0,1,0
 ES2735,Sonette,1,1,NA,pup,male,2008-03-13,0.4,35,30.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.647795695889841,0.934887941,9.77959316159414e-05,0,1,0,0,0,0,0,3,0
-ES2737,Othello,NA,NA,NA,pup,female,2008-03-15,0.6,34,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.971693543834761,NA,NA,0,1,0,0,0,0,0,3,1
+ES2737,Othello,NA,NA,NA,pup,female,2008-03-15,0.6,34,32.5,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,NA,NA,NA,0,1,0,0,0,0,0,3,1
 ES2738,Roo,NA,NA,NA,pup,female,2008-03-16,0.6,35,37,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,0.755761645204814,NA,NA,0,1,0,0,0,0,0,3,1
 ES2756,Hessie,1,1,NA,pup,male,2008-03-25,0.6,38,40.5,died in treatment,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,1.18762544246471,0.94083209,0.000106845604564615,0,1,0,0,0,0,0,3,0
 ES2757,Ophelia,NA,NA,NA,pup,male,2008-03-26,0.8,29,31,euthanasia,1,Malnutrition,1,0,0,0,0,0,0,0,March,2008,1.29559139177968,NA,NA,0,1,0,0,0,0,0,3,0
@@ -105,7 +105,7 @@ ES2956,Pollock,1,1,NA,pup,male,2009-05-24,2,47,47,euthanasia,2,Trauma,0,1,0,0,0,
 ES3011,KLatson,1,1,NA,pup,male,2010-03-15,0.3,35.5,33,died in treatment,2,Trauma,0,1,0,0,0,0,0,0,March,2010,0.971693543834761,1.047170742,0.000121458890999177,0,0,0,0,0,0,1,3,0
 ES3155,Apollona,1,1,NA,pup,female,2011-03-09,0.4,58,58,euthanasia,2,Trauma,0,1,0,1,0,0,0,0,March,2011,0.971693543834761,0.918409598,8.60721843057303e-05,1,0,0,0,0,0,1,3,1
 ES3354,Peppermint,1,1,1,pup,female,2012-05-01,2,40,49.5,euthanasia,2,Trauma,0,1,0,0,0,0,0,0,May,2012,0.830810534824705,1.034645345,0.000100403835090003,0,0,0,0,0,0,1,5,1
-FnMa012912,NA,NA,NA,NA,pup,male,2012-01-27,NA,NA,NA,carcass,2,Trauma,0,1,0,1,0,0,0,0,January,2012,0.727185951858504,NA,NA,1,0,0,0,0,0,1,1,0
+FnMa012912,NA,NA,NA,NA,pup,male,2012-01-27,NA,NA,NA,carcass,2,Trauma,0,1,0,1,0,0,0,0,January,2012,NA,NA,NA,1,0,0,0,0,0,1,1,0
 ES2593,Bgers,NA,NA,NA,pup,male,2006-05-03,1.6,49.5,49.5,euthanasia,3,Bacterial infection,0,0,1,0,0,0,0,0,May,2006,1.18762544246471,NA,NA,1,0,1,0,0,0,0,5,0
 ES3206,Olivera,NA,NA,NA,pup,female,2011-04-10,0.7,35.5,31.5,died in treatment,3,Bacterial infection,1,0,1,1,0,0,0,0,April,2011,1.03101696007447,NA,NA,1,0,1,0,0,0,0,4,1
 ES3207,Mala,1,1,NA,pup,male,2011-04-10,0.6,34.5,31.2,euthanasia,3,Bacterial infection,0,0,1,0,0,0,0,0,April,2011,0.971693543834761,0.923907405,8.97538201478482e-05,1,0,1,0,0,0,0,4,0
@@ -182,7 +182,7 @@ ES2913,Irwin,1,1,1,pup,female,2009-04-12,0.7,35,36,died in treatment,6,Otostrong
 ES2915,Tarnation,1,1,1,pup,female,2009-04-13,0.4,39,49,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.863727594519787,0.942672398,0.000103567533503318,0,0,0,0,1,0,0,4,1
 ES2919,Frijole,1,NA,NA,pup,male,2009-04-16,0.9,44.5,43,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.647795695889841,NA,0.000117028773470398,0,0,0,0,1,0,0,4,0
 ES2920,BOA,NA,NA,NA,pup,female,2009-04-16,0.6,36.5,39,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,0.971693543834761,NA,NA,0,0,0,0,1,0,0,4,1
-ES2923,Hanford,1,NA,NA,pup,female,2009-04-18,0.7,39,41.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,1.37468928009929,NA,0.000129475455755597,0,0,0,0,1,0,0,4,1
+ES2923,Hanford,1,NA,NA,pup,female,2009-04-18,0.7,39,41.5,died in treatment,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,NA,NA,0.000129475455755597,0,0,0,0,1,0,0,4,1
 ES2927,Tulare,NA,NA,NA,pup,female,2009-04-19,0.1,32,33.5,euthanasia,6,Otostrongylis,0,0,0,0,0,0,1,0,April,2009,1.01130022610223,NA,NA,0,0,0,0,1,0,0,4,1
 ES2929,Morisot,1,NA,NA,pup,female,2009-04-20,0.6,27.5,30,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.561833458945685,NA,0.000125395101871153,0,0,0,0,1,0,0,4,1
 ES2930,Sandoval,1,1,1,pup,female,2009-04-21,0.1,35.5,30,euthanasia,6,Otostrongylis,1,0,0,0,0,0,1,0,April,2009,0.971693543834761,0.953126533,8.16731124826063e-05,0,0,0,0,1,0,0,4,1

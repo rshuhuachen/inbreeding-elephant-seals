@@ -104,7 +104,7 @@ colnames(sMLH_df)[1] <- "sMLH"
 sMLH_df <- tibble::rownames_to_column(sMLH_df, "id")
 
 #exclude some individuals due to phenotypic uncertainty
-exclude <- c("ES2937", "ES2636", "ES2932","FaMa012912","ES3196","FaMa010712","FaMa010412")
+exclude <- c("ES2737", "ES2636", "ES2923","FnMa012912","ES3196","FaMa010712","FaMa010412")
 `%!in%` = Negate(`%in%`)
 sMLH_df <- subset(sMLH_df, id %!in% exclude)
 

@@ -12,6 +12,18 @@ clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
 clr_pheno["Protozoa"] <- "#0C0A3E"
 clr_pheno["Congenital defect"] <- "#8AC6D0"
 
+clr_method <- color(c("#777777", "#B5BCB3"))%>% #original orange purple
+  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+
+clr_method <- color(c("#7570b3", "#d95f02")) %>% #two shades of grey
+  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+
+clr_method <- c("#D1CE9E", "#37515F") %>% color() %>% #blue and yellow ish
+  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+
+clr_method <- color(c("#37515F", "#7198AD")) %>% #blues
+  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+
 ##### Plot 1a g2 David #####
 
 # Import data
@@ -20,29 +32,29 @@ g2_m<-read.table("data/smlh/g2msats_10000.txt",h=F) # msats g2
 #combine
 names(g2) <- "g2"
 names(g2_m) <- "g2"
-g2$method <- "SNP"
-g2_m$method <- "Msat"
+g2$method <- "15,051 SNPs"
+g2_m$method <- "22 microsatellites"
 g2_combined <- rbind(g2, g2_m)
 
 ## plot
 ggplot(g2_combined, aes(x = g2, fill = method, color = method)) +
   geom_histogram(position = "identity", bins = 100) +
-  scale_fill_manual(values = alpha(c("#7570b3", "#d95f02"), 0.4))+
-  scale_color_manual(values = c("#7570b3", "#d95f02"))+
+  scale_fill_manual(values = alpha(clr_method, 0.4))+
+  scale_color_manual(values = clr_method)+
   xlim(-0.02, 0.04)+
   ylim(0, 700)+
   geom_segment(x = 0.01108032, #point estimate bootstrap
                xend = 0.01108032,
-               y = 0, yend = 650, colour = "#d95f02", linewidth = 1) +
+               y = 0, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
   geom_segment(x = 0.003214729, #95% CI from inbreedR
                xend = 0.020233918,#95% CI from inbreedR
-               y = 650, yend = 650, colour = "#d95f02", linewidth = 1) +
+               y = 650, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
   geom_segment(x = 0.01232521,#point estimate bootstrap
                xend = 0.01232521,
-               y = 0, yend = 600, colour = "#7570b3", linewidth = 1) +
+               y = 0, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
   geom_segment(x = -0.001410787,#95% CI from inbreedR
                xend = 0.027361777,#95% CI from inbreedR
-               y = 600, yend = 600, colour = "#7570b3", linewidth = 1) +
+               y = 600, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
   labs(x=substitute(italic(g)[2]), y = "Frequency")+
   theme_classic(base_family = "Arial")+
   theme(legend.position="none",
@@ -132,8 +144,8 @@ ggplot(data = subset(data_other$outer, response == "Body mass")) +
   geom_point(data = subset(brms_other_interval, response == "Body mass"), aes(x = m, y = response), color="black", fill = "grey60", shape=21, size = 4) + 
   geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
   facet_wrap(~model, ncol = 2) +
-  scale_fill_manual(values =alpha(c("#7570b3", "#d95f02"), 0.6)) +
-  scale_color_manual(values =c("#7570b3", "#d95f02")) +
+  scale_fill_manual(values =alpha(clr_method, 0.6)) +
+  scale_color_manual(values =clr_method) +
   #  xlim(-1.5, 1.5)+
   labs(x = "Standardised beta coefficient")+
   theme_bw(base_family = "Arial")+
@@ -161,8 +173,8 @@ ggplot(data = subset(data_other$outer, response == "Blubber thickness")) +
   geom_point(data = subset(brms_other_interval, response == "Blubber thickness"), aes(x = m, y = response), color="black", fill = "grey60", shape=21, size = 4) + 
   geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
   facet_wrap(~model, ncol = 2) +
-  scale_fill_manual(values =alpha(c("#7570b3", "#d95f02"), 0.6)) +
-  scale_color_manual(values =c("#7570b3", "#d95f02")) +
+  scale_fill_manual(values =alpha(clr_method, 0.6)) +
+  scale_color_manual(values =clr_method) +
   #  xlim(-1.5, 1.5)+
   labs(x = "Standardised beta coefficient")+
   theme_bw(base_family = "Arial")+
@@ -372,8 +384,8 @@ ggplot(subset(data_long_long, !is.na(smlh)), aes(x = as.factor(measurement), y =
   geom_point(position=position_jitter(width = 0.2, height = 0),
              aes(col = as.factor(method)), size = 2) + 
   geom_boxplot(width = 0.6, outlier.shape = NA, lwd = 0.7, aes(fill = as.factor(method))) + 
-  scale_fill_manual(values=alpha(c("#7570b3", "#d95f02"), 0.5))+
-  scale_color_manual(values=alpha(c("#7570b3", "#d95f02"), 0.6))+
+  scale_fill_manual(values=alpha(clr_method, 0.5))+
+  scale_color_manual(values=alpha(clr_method, 0.6))+
   facet_grid(condition~method, scales = "free", switch = "y")+
   labs(x = "Cause of death", y = "z-transformed sMLH")+
   theme_bw(base_family = "Arial")+
@@ -404,12 +416,12 @@ ggsave(plot_1d_boxplots, file = "plots/final/Plot1d_boxplot_smlh.png", height = 
 
 plot_left <- plot_grid(plot_1a_g2, plot_1c_binary_primary, labels = c("a)", "c)"), ncol = 1, align = "v", axis = "l",
                       label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
-plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), align = "v", 
+plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)", "d)"), 
                         ncol = 1, label_fontface = "plain",label_size = 28, rel_heights = c(1,2))
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
 
-ggsave(plot1, file="plots/final/Plot1.png", height = 18, width = 20)
+ggsave(plot1, file="plots/final/Plot1_v4.png", height = 18, width = 20)
 
 #### Supplementary plot: effect size sMLH vs chromosome length ####
 ### Part A: worms ####
