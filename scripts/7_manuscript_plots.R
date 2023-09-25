@@ -12,10 +12,10 @@ clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
 clr_pheno["Protozoa"] <- "#0C0A3E"
 clr_pheno["Congenital defect"] <- "#8AC6D0"
 
-clr_method <- color(c("#777777", "#B5BCB3"))%>% #original orange purple
+clr_method <- color(c("#333333", "#ACB2A9"))%>% #two shades of grey
   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 
-clr_method <- color(c("#7570b3", "#d95f02")) %>% #two shades of grey
+clr_method <- color(c("#7570b3", "#d95f02")) %>% #original
   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 
 clr_method <- c("#D1CE9E", "#37515F") %>% color() %>% #blue and yellow ish
@@ -421,7 +421,7 @@ plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
 
-ggsave(plot1, file="plots/final/Plot1_v4.png", height = 18, width = 20)
+ggsave(plot1, file="plots/final/Plot1_v5.png", height = 18, width = 20)
 
 #### Supplementary plot: effect size sMLH vs chromosome length ####
 ### Part A: worms ####
