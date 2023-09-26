@@ -99,7 +99,7 @@ for (i in 1:length(list_models)){
 
 
 #### Supplementary analysis: categorical model #####
-#### Categorical: primary classification ####
+## Categorical: primary classification ####
 
 prior <- c(set_prior("normal(-1,1)", dpar = "muBacterialinfection"),
            set_prior("normal(0,1)", dpar = "muCongenitaldefect"),
@@ -124,26 +124,39 @@ brm_primary_snp <- brm(relevel(primary_class, ref = "Trauma") ~ scale(smlh_snp) 
                        prior=prior)
 save(brm_primary_snp, file = "output/brms_primaryclass_smlh_snp.RData")
 
-for (i in c(brm_primary_msat, brm_primary_snp)){
-  pdf(file = paste0("plots/diagnostics/diagnose_", names(list_models[i]), ".pdf"))
-  # extract beta's for some plots
-  betas <- subset(variables(list_models[[i]]), grepl("b_", variables(list_models[[i]])) & !grepl("_Intercept", variables(list_models[[i]])))
-  #autocor
-  print(mcmc_acf(list_models[[i]], lags = 10))
-  #trace betas
-  print(mcmc_trace(list_models[[i]], pars = c(betas)))
-  #trace all
-  print(mcmc_trace(list_models[[i]]))
-  
-  #rhat
-  print(mcmc_rhat(brms::rhat(list_models[[i]])))
-  #neff
-  print(mcmc_neff(neff_ratio(list_models[[i]])))
-  
-  # areas
-  print(mcmc_areas(list_models[[i]], pars = c(betas)))
-  
-  dev.off()
-  i = i+1
-}
 
+  pdf(file = paste0("plots/diagnostics/diagnose_categorical_msat.pdf"))
+  # extract beta's for some plots
+  betas <- subset(variables(brm_primary_msat), grepl("b_", variables(brm_primary_msat)) & !grepl("_Intercept", variables(brm_primary_msat)))
+  #autocor
+  print(mcmc_acf(brm_primary_msat, lags = 10))
+  #trace betas
+  print(mcmc_trace(brm_primary_msat, pars = c(betas)))
+  #trace all
+  print(mcmc_trace(brm_primary_msat))
+  #rhat
+  print(mcmc_rhat(brms::rhat(brm_primary_msat)))
+  #neff
+  print(mcmc_neff(neff_ratio(brm_primary_msat)))
+  # areas
+  print(mcmc_areas(brm_primary_msat, pars = c(betas)))
+  dev.off()
+
+### diagnostics for snps
+  pdf(file = paste0("plots/diagnostics/diagnose_categorical_snps.pdf"))
+  # extract beta's for some plots
+  betas <- subset(variables(brm_primary_snp), grepl("b_", variables(brm_primary_snp)) & !grepl("_Intercept", variables(brm_primary_snp)))
+  #autocor
+  print(mcmc_acf(brm_primary_snp, lags = 10))
+  #trace betas
+  print(mcmc_trace(brm_primary_snp, pars = c(betas)))
+  #trace all
+  print(mcmc_trace(brm_primary_snp))
+  #rhat
+  print(mcmc_rhat(brms::rhat(brm_primary_snp)))
+  #neff
+  print(mcmc_neff(neff_ratio(brm_primary_snp)))
+  # areas
+  print(mcmc_areas(brm_primary_snp, pars = c(betas)))
+  dev.off()
+  

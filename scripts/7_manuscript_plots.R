@@ -9,30 +9,30 @@ clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
   set_names(nm = c("Worms", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
 
 #change brown and pink color
-clr_pheno["Protozoa"] <- "#0C0A3E" #dark
+#clr_pheno["Protozoa"] <- "#0C0A3E" #dark
 clr_pheno["Protozoa"] <- "#DEC102" #yellow
-clr_pheno["Congenital defect"] <- "#8AC6D0" #light blue
+#clr_pheno["Congenital defect"] <- "#8AC6D0" #light blue
 clr_pheno["Congenital defect"] <- "#E4A1A0" #pink
 
-clr_method <- color(c("#333333", "#ACB2A9"))%>% #two shades of grey
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+#clr_method <- color(c("#333333", "#ACB2A9"))%>% #two shades of grey
+#  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+# 
+# clr_method <- color(c("#7570b3", "#d95f02")) %>% #original
+#   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+# 
+# clr_method <- c("#D1CE9E", "#37515F") %>% color() %>% #blue and yellow ish
+#   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+# 
+# clr_method <- color(c("#37515F", "#7198AD")) %>% #blues
+#   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+# 
+# clr_method <- color(c("#7570b3", "#DEC102")) %>% #original purple and yellow instead
+#   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
+# 
+# clr_method <- color(c("grey60", "grey80")) %>% #kosmas grey
+#   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 
-clr_method <- color(c("#7570b3", "#d95f02")) %>% #original
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
-
-clr_method <- c("#D1CE9E", "#37515F") %>% color() %>% #blue and yellow ish
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
-
-clr_method <- color(c("#37515F", "#7198AD")) %>% #blues
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
-
-clr_method <- color(c("#7570b3", "#DEC102")) %>% #original purple and yellow instead
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
-
-clr_method <- color(c("grey60", "grey80")) %>% #kosmas grey
-  set_names(nm = c("22 microsatellites", "15,051 SNPs"))
-
-clr_method <- color(c("#253741", "#7198AD")) %>% #blues more contrast
+clr_method <- color(c("#7198AD", "#253741")) %>% #blues more contrast
   set_names(nm = c("22 microsatellites", "15,051 SNPs"))
 ##### Plot 1a g2 David #####
 
@@ -431,7 +431,7 @@ plot_right <- plot_grid(plot_1b_blubber_weight, plot_1d_boxplots, labels = c("b)
 
 plot_grid(plot_left, plot_right, nrow = 1, align = "lv", axis = "lb") -> plot1
 
-ggsave(plot1, file="plots/final/Plot1_v10.png", height = 18, width = 20)
+ggsave(plot1, file="plots/final/Plot1.png", height = 18, width = 20)
 
 #### Supplementary plot: effect size sMLH vs chromosome length ####
 ### Part A: worms ####
