@@ -65,6 +65,7 @@ ggplot(g2_combined, aes(x = g2, fill = method, color = method)) +
   geom_segment(x = -0.001410787,#95% CI from inbreedR
                xend = 0.027361777,#95% CI from inbreedR
                y = 600, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
+  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
   labs(x=substitute(italic(g)[2]), y = "Frequency")+
   theme_classic(base_family = "Arial")+
   theme(legend.position="none",
