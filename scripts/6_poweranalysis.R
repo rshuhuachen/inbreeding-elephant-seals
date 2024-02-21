@@ -1,11 +1,11 @@
 # load libraries
 
-pacman::p_load(pwr, pwrss, prismatic)
+pacman::p_load(pwr, pwrss, prismatic, tidyverse)
 
 ## set colors
 clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
   color() %>% 
-  set_names(nm = c("Worms", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
+  set_names(nm = c("Helmiths", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
 
 #change brown and pink color
 clr_pheno["Protozoa"] <- "#0C0A3E"
