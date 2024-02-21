@@ -260,7 +260,7 @@ brms_primary_bi_interval <- subset(brms_primary_bi_interval, grepl("smlh", param
 
 brms_primary_bi_interval$model <- rep(c("22 microsatellites", "15,051 SNPs"), times = 6)
 
-brms_primary_bi_interval$response <- rep(c("Congenital defect", "Bacteria", "Protozoa", "Trauma", "Worms", "Malnutrition"),
+brms_primary_bi_interval$response <- rep(c("Congenital defect", "Bacteria", "Protozoa", "Trauma", "Helminths", "Malnutrition"),
                                          each = 2)
 
 #areas
@@ -300,8 +300,8 @@ brms_primary_bi_area$response <- c(rep("Congenital defect", nrow(mcmc_areas_data
                                    rep("Protozoa", nrow(mcmc_areas_data(model_protozoa_bi_smlh_snp))),
                                    rep("Trauma", nrow(mcmc_areas_data(model_trauma_bi_smlh_msat))),
                                    rep("Trauma", nrow(mcmc_areas_data(model_trauma_bi_smlh_snp))),
-                                   rep("Worms", nrow(mcmc_areas_data(model_worms_bi_smlh_msat))),
-                                   rep("Worms", nrow(mcmc_areas_data(model_worms_bi_smlh_snp))),
+                                   rep("Helminths", nrow(mcmc_areas_data(model_worms_bi_smlh_msat))),
+                                   rep("Helminths", nrow(mcmc_areas_data(model_worms_bi_smlh_snp))),
                                    rep("Malnutrition", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_msat))),
                                    rep("Malnutrition", nrow(mcmc_areas_data(model_malnutrition_bi_smlh_snp))))
 
@@ -329,7 +329,7 @@ brms_primary_bi$bottom <- brms_primary_bi$outer %>%
 
 ggplot(data = brms_primary_bi$outer) + aes(x = .data$x, 
                                            y = fct_relevel(.data$response, "Congenital defect","Malnutrition","Trauma", 
-                                                           "Protozoa", "Bacteria", "Worms")) + 
+                                                           "Protozoa", "Bacteria", "Helminths")) + 
   geom_ridgeline(aes(scale = 0.4, height = scaled_density, fill = .data$response, col = .data$response), size = 0.8)+
   geom_segment(data = brms_primary_bi_interval, aes(x = l, xend = h, yend = response), col = "black", size=3)+
   geom_segment(data = brms_primary_bi_interval, aes(x = ll, xend = hh, yend = response), col = "black")+
@@ -372,7 +372,7 @@ data_select <- data[,c("id", "smlh_msat", "smlh_snp",
                        "worms_bi", "protozoa_bi", "trauma_bi")]
 names(data_select) <- c("id", "smlh_msat", "smlh_snp", 
                        "Malnutrition", "Bacteria", "Congenital defect",
-                       "Worms", "Protozoa", "Trauma")
+                       "Helminths", "Protozoa", "Trauma")
 
 data_long <- gather(data_select, condition, measurement, Malnutrition:Trauma)
 
@@ -383,7 +383,7 @@ data_long_long <- gather(data_long, method, smlh, smlh_msat:smlh_snp)
 data_long_long$method <- as.factor(data_long_long$method)
 
 data_long_long$condition <- fct_relevel(data_long_long$condition,
-                                        c("Worms", "Bacteria",
+                                        c("Helminths", "Bacteria",
                                           "Protozoa","Trauma", 
                                           "Malnutrition","Congenital defect"))
 
@@ -625,7 +625,7 @@ brms_primary_interval$parameter <- gsub("_scalesmlh_snp", "", brms_primary_inter
 
 brms_primary_interval$parameter <- gsub("Bacterialinfection", "Bacteria", brms_primary_interval$parameter)
 brms_primary_interval$parameter <- gsub("Congenitaldefect", "Congenital defect", brms_primary_interval$parameter)
-brms_primary_interval$parameter <- gsub("Otostrongylis", "Worms", brms_primary_interval$parameter)
+brms_primary_interval$parameter <- gsub("Otostrongylis", "Helminths", brms_primary_interval$parameter)
 
 
 brms_primary_areas$parameter <- gsub("b_mu", "", brms_primary_areas$parameter)
@@ -634,7 +634,7 @@ brms_primary_areas$parameter <- gsub("_scalesmlh_snp", "", brms_primary_areas$pa
 
 brms_primary_areas$parameter <- gsub("Bacterialinfection", "Bacteria", brms_primary_areas$parameter)
 brms_primary_areas$parameter <- gsub("Congenitaldefect", "Congenital defect", brms_primary_areas$parameter)
-brms_primary_areas$parameter <- gsub("Otostrongylis", "Worms", brms_primary_areas$parameter)
+brms_primary_areas$parameter <- gsub("Otostrongylis", "Helminths", brms_primary_areas$parameter)
 
 brms_primary_areas$model <- factor(as.factor(brms_primary_areas$model), levels = c("22 microsatellites", "15,051 SNPs"))
 brms_primary_interval$model <- factor(as.factor(brms_primary_interval$model), levels = c("22 microsatellites", "15,051 SNPs"))
@@ -654,7 +654,7 @@ data_primary$bottom <- data_primary$outer %>%
 ## plot
 
 ggplot(data = data_primary$outer) + aes(x = .data$x, y = fct_relevel(.data$parameter, "Congenital defect","Malnutrition",
-                                                                         "Protozoa", "Bacteria", "Worms")) + 
+                                                                         "Protozoa", "Bacteria", "Helminths")) + 
   geom_ridgeline(aes(scale = 0.4, height = scaled_density, fill = .data$parameter, col = .data$parameter), size = 0.8)+
   geom_segment(data = brms_primary_interval, aes(x = l, xend = h, yend = parameter), col = "black", size=3)+
   geom_segment(data = brms_primary_interval, aes(x = ll, xend = hh, yend = parameter), col = "black")+
