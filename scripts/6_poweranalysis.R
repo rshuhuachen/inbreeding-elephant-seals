@@ -71,7 +71,7 @@ pwr_bac$trait <- "Bacteria"
 pwr_cong <- power_test(congenital_bi, pwr_increment = 0.1, data = data)
 pwr_cong$trait <- "Congenital defect"
 pwr_worm <- power_test(worms_bi, pwr_increment = 0.1, data = data)
-pwr_worm$trait <- "Worms"
+pwr_worm$trait <- "Helmiths"
 pwr_pro <- power_test(protozoa_bi, pwr_increment = 0.1, data = data)
 pwr_pro$trait <- "Protozoa"
 pwr_trau <- power_test(trauma_bi, pwr_increment = 0.1, data = data)
