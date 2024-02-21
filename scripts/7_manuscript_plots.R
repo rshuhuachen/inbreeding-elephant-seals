@@ -6,7 +6,7 @@ pacman::p_load(brms, bayesplot, tidyverse, ggridges, prismatic, ggpubr, extrafon
 ### set colours categories ####
 clr_pheno <- RColorBrewer::brewer.pal(8, "Set1")[c(1,3:5,7:8)] %>%
   color() %>% 
-  set_names(nm = c("Worms", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
+  set_names(nm = c("Helminths", "Bacteria", "Malnutrition","Trauma", "Protozoa", "Congenital defect"))
 
 #change brown and pink color
 #clr_pheno["Protozoa"] <- "#0C0A3E" #dark
