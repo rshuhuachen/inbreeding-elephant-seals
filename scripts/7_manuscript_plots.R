@@ -84,6 +84,78 @@ ggplot(g2_combined, aes(x = g2, fill = method, color = method)) +
 
 ggsave(plot_1a_g2, filename = "plots/final/Plot1a_g2.png", width=8, height=8)
 
+#separate plots for Joe
+ggplot(subset(g2_combined, method == "22 microsatellites"), aes(x = g2, fill = method, color = method)) +
+  geom_histogram(position = "identity", bins = 100) +
+  scale_fill_manual(values = alpha(clr_method, 0.4))+
+  scale_color_manual(values = clr_method)+
+  xlim(-0.02, 0.04)+
+  ylim(0, 700)+
+#  geom_segment(x = 0.01108032, #point estimate bootstrap
+#               xend = 0.01108032,
+#               y = 0, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
+#  geom_segment(x = 0.003214729, #95% CI from inbreedR
+#               xend = 0.020233918,#95% CI from inbreedR
+#               y = 650, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
+  geom_segment(x = 0.01232521,#point estimate bootstrap
+               xend = 0.01232521,
+               y = 0, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
+  geom_segment(x = -0.001410787,#95% CI from inbreedR
+               xend = 0.027361777,#95% CI from inbreedR
+               y = 600, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
+  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
+  labs(x=substitute(italic(g)[2]), y = "Frequency")+
+  theme_classic(base_family = "Arial")+
+  theme(legend.position="none",
+        text = element_text(family = "Arial", size = 24),
+        axis.line = element_line(colour = "black",
+                                 linewidth = 0.3),
+        axis.text.x = element_text(color = "black"),
+        axis.text.y = element_text(color = "black"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
+                                    color = "black"),
+        plot.margin = margin(1,1,1,1, "cm"),
+        
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0),
+                                    color = "black")) -> msat_only
+
+ggplot(subset(g2_combined, method == "15,051 SNPs"), aes(x = g2, fill = method, color = method)) +
+  geom_histogram(position = "identity", bins = 100) +
+  scale_fill_manual(values = alpha(clr_method, 0.4))+
+  scale_color_manual(values = clr_method)+
+  xlim(-0.02, 0.04)+
+  ylim(0, 700)+
+    geom_segment(x = 0.01108032, #point estimate bootstrap
+                 xend = 0.01108032,
+                 y = 0, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
+    geom_segment(x = 0.003214729, #95% CI from inbreedR
+                 xend = 0.020233918,#95% CI from inbreedR
+                 y = 650, yend = 650, colour = clr_method["15,051 SNPs"], linewidth = 1) +
+  #geom_segment(x = 0.01232521,#point estimate bootstrap
+  #             xend = 0.01232521,
+  #             y = 0, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
+  #geom_segment(x = -0.001410787,#95% CI from inbreedR
+  #             xend = 0.027361777,#95% CI from inbreedR
+  #             y = 600, yend = 600, colour = clr_method["22 microsatellites"], linewidth = 1) +
+  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
+  labs(x=substitute(italic(g)[2]), y = "Frequency")+
+  theme_classic(base_family = "Arial")+
+  theme(legend.position="none",
+        text = element_text(family = "Arial", size = 24),
+        axis.line = element_line(colour = "black",
+                                 linewidth = 0.3),
+        axis.text.x = element_text(color = "black"),
+        axis.text.y = element_text(color = "black"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
+                                    color = "black"),
+        plot.margin = margin(1,1,1,1, "cm"),
+        
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0),
+                                    color = "black")) -> snp_only
+
+ggsave(msat_only, filename = "plots/final/Plot1a_g2_msat_only.png", width=8, height=8)
+ggsave(snp_only, filename = "plots/final/Plot1a_g2_snp_only.png", width=8, height=8)
+
 ##### Plot 1b: other factors #####
 #load models
 load(file = "output/brms_weight_smlh_msat.RData")
