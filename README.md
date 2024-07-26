@@ -1,6 +1,6 @@
 # Northern elephant seal inbreeding models
 
-This repository contains all raw data, plots and scripts for the inbreeding models implemented in Hoffman et al. (in prep) Genomic consequences of an extreme bottleneck in northern elephant seals.
+This repository contains all raw data, plots and scripts for the inbreeding models implemented in Hoffman et al. (2024, in press) titled "Genomic and fitness consequences of a near-extinction event in the northern elephant seal"  published in Nature Ecology and Evolution. 
 
 To import the repository to your local device, ensure you have git installed and execute the following command in the terminal:
 

@@ -99,7 +99,7 @@ for (i in 1:length(list_models)){
 
 
 #### Supplementary analysis: categorical model #####
-## Categorical: primary classification ####
+## Categorical: primary classification ###
 
 prior <- c(set_prior("normal(-1,1)", dpar = "muBacterialinfection"),
            set_prior("normal(0,1)", dpar = "muCongenitaldefect"),
@@ -158,5 +158,70 @@ save(brm_primary_snp, file = "output/brms_primaryclass_smlh_snp.RData")
   print(mcmc_neff(neff_ratio(brm_primary_snp)))
   # areas
   print(mcmc_areas(brm_primary_snp, pars = c(betas)))
+  dev.off()
+  
+#### Supplements: trauma vs no trauam ####
+  #### In addition: trauma vs non trauma ####
+  
+  data <- data %>% mutate(notrauma = as.factor(case_when(
+    trauma_bi == 1 ~ 0, # N = 19
+    malnutrition_bi == 1 | bacteria_bi ==1 | congenital_bi == 1 | worms_bi == 1 | protozoa_bi == 1 ~ 1 # N = 200
+  )))
+  
+  brm_notrauma_msat <- brm(notrauma ~ scale(smlh_msat) + (1|Sex) + (1|Year) + (1|admit_month),
+                           family= bernoulli,
+                           data = data, 
+                           iter = 100000, 
+                           thin = 100,
+                           chains = 3,
+                           set_prior("normal(0,1)", class = "b"))   
+  
+  save(brm_notrauma_msat, file = "output/brms_no_trauma_smlh_msat.RData")
+  
+  brm_notrauma_snp <- brm(notrauma ~ scale(smlh_snp) + (1|Sex) + (1|Year) + (1|admit_month),
+                          family= bernoulli,
+                          data = data, 
+                          iter = 100000, 
+                          thin = 100,
+                          chains = 3,
+                          set_prior("normal(0,1)", class = "b"))   
+  
+  save(brm_notrauma_snp, file = "output/brms_no_trauma_smlh_snp.RData")
+  
+  #diagnose
+  
+  pdf(file = paste0("plots/diagnosing/diagnose_no_trauma_msat.pdf"))
+  # extract beta's for some plots
+  betas <- subset(variables(brm_notrauma_msat), grepl("b_", variables(brm_notrauma_msat)) & !grepl("_Intercept", variables(brm_notrauma_msat)))
+  #autocor
+  print(mcmc_acf(brm_notrauma_msat, lags = 10))
+  #trace betas
+  print(mcmc_trace(brm_notrauma_msat, pars = c(betas)))
+  #trace all
+  print(mcmc_trace(brm_notrauma_msat))
+  #rhat
+  print(mcmc_rhat(brms::rhat(brm_notrauma_msat)))
+  #neff
+  print(mcmc_neff(neff_ratio(brm_notrauma_msat)))
+  # areas
+  print(mcmc_areas(brm_notrauma_msat, pars = c(betas)))
+  dev.off()
+  
+  ### diagnostics for snps
+  pdf(file = paste0("plots/diagnosing/diagnose_no_trauma_snps.pdf"))
+  # extract beta's for some plots
+  betas <- subset(variables(brm_notrauma_snp), grepl("b_", variables(brm_notrauma_snp)) & !grepl("_Intercept", variables(brm_notrauma_snp)))
+  #autocor
+  print(mcmc_acf(brm_notrauma_snp, lags = 10))
+  #trace betas
+  print(mcmc_trace(brm_notrauma_snp, pars = c(betas)))
+  #trace all
+  print(mcmc_trace(brm_notrauma_snp))
+  #rhat
+  print(mcmc_rhat(brms::rhat(brm_notrauma_snp)))
+  #neff
+  print(mcmc_neff(neff_ratio(brm_notrauma_snp)))
+  # areas
+  print(mcmc_areas(brm_notrauma_snp, pars = c(betas)))
   dev.off()
   

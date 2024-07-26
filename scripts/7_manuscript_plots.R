@@ -759,38 +759,87 @@ ggplot(data = data_primary$outer) + aes(x = .data$x, y = fct_relevel(.data$param
 
 ggsave(plot_1b_categorical_primary, filename = "plots/final/Supp_primary_bayes_categorical.png", width=10, height=10)
 
-#### Supplementary plot: Power test #####
-## plotting
+##### Supplementary plot: compare all trauma cases with no trauma ####
 
-load(file = "output/powertest_all.RData")
+### load data ###
+load(file = "output/brms_no_trauma_smlh_msat.RData")
+load(file = "output/brms_no_trauma_smlh_snp.RData")
 
-ggplot(pwrtest_all, aes(x = power, y = n, col = trait, group = trait))+
-  geom_point(size=3)+ geom_line(lwd=1)+
-  scale_y_log10(breaks = c(100, 1000, 10000, 100000),
-                labels = c(expression("10"^2), expression("10"^3), 
-                           expression("10"^4), expression("10"^5)))+
-  scale_color_manual(values=clr_pheno)+
-  geom_hline(aes(yintercept = min(pwrtest_all$n[which(pwrtest_all$power == 0.8)])),
-             col = "red", linetype = "dashed")+
-  labs(x = "Statistical power", y = "Sample size required", col = "Category")+
+### combine results in one df
+brms_notrauma_interval <- rbind(mcmc_intervals_data(brm_notrauma_msat, prob =0.8, prob_outer = 0.95),
+                                mcmc_intervals_data(brm_notrauma_snp, prob =0.8, prob_outer = 0.95))
+
+brms_notrauma_interval$model <- c(rep("22 microsatellites", nrow(mcmc_intervals_data(brm_notrauma_msat))),
+                                  rep("15,051 SNPs", nrow(mcmc_intervals_data(brm_notrauma_snp))))
+
+brms_notrauma_interval <- subset(brms_notrauma_interval, grepl("smlh", parameter))
+
+brms_notrauma_areas <- rbind(mcmc_areas_data(brm_notrauma_msat),
+                             mcmc_areas_data(brm_notrauma_snp))
+
+brms_notrauma_areas$model <- c(rep("22 microsatellites", nrow(mcmc_areas_data(brm_notrauma_msat))),
+                               rep("15,051 SNPs", nrow(mcmc_areas_data(brm_notrauma_snp))))
+
+brms_notrauma_areas <- subset(brms_notrauma_areas, grepl("smlh", parameter)) #only select fixed effect beta estimates
+
+## rename
+brms_notrauma_interval$parameter <- gsub("b_scalesmlh_msat", "Not trauma", brms_notrauma_interval$parameter)
+brms_notrauma_interval$parameter <- gsub("b_scalesmlh_snp", "Not trauma", brms_notrauma_interval$parameter)
+
+brms_notrauma_areas$parameter <- gsub("b_scalesmlh_msat", "Not trauma", brms_notrauma_areas$parameter)
+brms_notrauma_areas$parameter <- gsub("b_scalesmlh_snp", "Not trauma", brms_notrauma_areas$parameter)
+
+brms_notrauma_areas$model <- factor(as.factor(brms_notrauma_areas$model), levels = c("22 microsatellites", "15,051 SNPs"))
+brms_notrauma_interval$model <- factor(as.factor(brms_notrauma_interval$model), levels = c("22 microsatellites", "15,051 SNPs"))
+
+# split by interval
+data_notrauma <- split(brms_notrauma_areas, brms_notrauma_areas$interval)
+
+data_notrauma$bottom <- data_notrauma$outer %>%
+  group_by(!!! groups) %>%
+  summarise(
+    ll = min(.data$x),
+    hh = max(.data$x),
+    .groups = "drop_last"
+  ) %>%
+  ungroup()
+
+## plot
+
+ggplot(data = data_notrauma$outer) + aes(x = .data$x, y = parameter) + 
+  geom_ridgeline(aes(scale = 0.4, height = scaled_density, fill = .data$model, col = .data$model), size = 0.8)+
+  geom_segment(data = brms_notrauma_interval, aes(x = l, xend = h, yend = parameter), col = "black", size=3)+
+  geom_segment(data = brms_notrauma_interval, aes(x = ll, xend = hh, yend = parameter), col = "black")+
+  geom_point(data = brms_notrauma_interval, aes(x = m, y = parameter), color="black", fill = "grey60", shape=21, size = 4) + 
+  geom_vline(xintercept = 0, col = "#ca562c", linetype="longdash")+
+  scale_fill_manual(values = alpha(clr_method, 0.5))+
+  scale_color_manual(values = clr_method)+
+  facet_wrap(~model, ncol = 2) +
+  # xlim(-4, 4)+
+  labs(x = "Standardised beta coefficient", y = "Cause of death")+
   theme_bw(base_family = "Arial")+
   theme(text = element_text(size = 24, color = "black"),
-        axis.text.y = element_text(color = "black", hjust=0.95),
+        axis.text.y = element_text(color = "black"),
         panel.border = element_blank(),
         panel.grid = element_blank(),
         axis.line = element_line(colour = "black",
                                  linewidth = 0.3),
         axis.ticks = element_line(colour = "black",
                                   linewidth = 0.3),
-        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
-                                    color = "black"),
         plot.subtitle = element_text(hjust = .5),
         strip.background = element_blank(),
-        legend.position = "bottom",
+        legend.position = "none",
         panel.spacing = unit(2, "lines"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0),
+                                    color = "black"),
         axis.text.x = element_text(color = "black"),
         plot.margin = margin(1,1,1,1, "cm"),
-        axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0),
-                                    color = "black")) -> plot_power
+        axis.title.x = element_text(margin = margin(t = 20, r = 0, b = 0, l = 0),
+                                    color = "black")) -> plot_1b_no_trauma
 
-ggsave(plot_power, file = "plots/final/Supp_power.png", width = 12, height=10)
+
+plot_sup <- plot_grid(plot_1b_categorical_primary, plot_1b_no_trauma, labels = c("a)", "b)"), ncol = 1, align = "v", axis = "l",
+                      label_fontface = "plain",label_size = 28, rel_heights = c(2,1))
+
+ggsave(plot_sup, filename = "plots/final/Supp_primary_bayes_categorical_plus_trauma.png", width=10, height=10)
+

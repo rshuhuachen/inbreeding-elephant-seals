@@ -1,0 +1,220 @@
+id,Selected for RAD sequencing,Succesfully RAD sequenced,Whole genome resequenced,Age,Sex,Admit date,Blubber thickness,Admit weight,primary_class_num,primary_class,admit_month,Year
+ES2396,NA,NA,NA,yearling,female,12/06/2006,0.5,41.5,1,Malnutrition,June,2006
+ES2545,NA,NA,NA,pup,male,22/03/2006,NA,35.5,1,Malnutrition,March,2006
+ES2549,NA,NA,NA,pup,female,24/03/2006,0.6,32.5,1,Malnutrition,March,2006
+ES2556,1,NA,NA,pup,male,29/03/2006,0.5,32,1,Malnutrition,March,2006
+ES2558,1,1,NA,pup,male,30/03/2006,5,34.5,1,Malnutrition,March,2006
+ES2559,NA,NA,NA,pup,male,30/03/2006,NA,40.5,1,Malnutrition,March,2006
+ES2571,NA,NA,NA,pup,male,09/04/2006,0.5,38.5,1,Malnutrition,April,2006
+ES2585,NA,NA,NA,pup,male,17/04/2006,NA,29.2,1,Malnutrition,April,2006
+ES2629,1,1,NA,pup,female,10/03/2007,NA,29,1,Malnutrition,March,2007
+ES2651,1,1,NA,yearling,male,23/03/2007,1.7,68,1,Malnutrition,March,2007
+ES2656,NA,NA,NA,pup,male,27/03/2007,0.5,34,1,Malnutrition,March,2007
+ES2664,NA,NA,NA,pup,female,02/04/2007,1.2,30.5,1,Malnutrition,April,2007
+ES2667,1,1,NA,pup,male,04/04/2007,1,39,1,Malnutrition,April,2007
+ES2701,NA,NA,NA,pup,male,29/05/2007,0.7,38.5,1,Malnutrition,May,2007
+ES2713,1,1,1,pup,male,05/01/2008,0.4,40,1,Malnutrition,January,2008
+ES2735,1,1,NA,pup,male,13/03/2008,0.4,35,1,Malnutrition,March,2008
+ES2737,NA,NA,NA,pup,female,15/03/2008,0.6,34,1,Malnutrition,March,2008
+ES2738,NA,NA,NA,pup,female,16/03/2008,0.6,35,1,Malnutrition,March,2008
+ES2756,1,1,NA,pup,male,25/03/2008,0.6,38,1,Malnutrition,March,2008
+ES2757,NA,NA,NA,pup,male,26/03/2008,0.8,29,1,Malnutrition,March,2008
+ES2766,1,1,NA,pup,male,29/03/2008,0.3,31,1,Malnutrition,March,2008
+ES2771,1,1,NA,pup,female,30/03/2008,0.2,41.5,1,Malnutrition,March,2008
+ES2783,NA,NA,NA,pup,female,08/04/2008,0.9,27.5,1,Malnutrition,April,2008
+ES2806,NA,NA,NA,pup,male,26/04/2008,0.6,31.5,1,Malnutrition,April,2008
+ES2813,1,NA,NA,pup,female,03/05/2008,1.2,34,1,Malnutrition,May,2008
+ES2839,NA,NA,NA,pup,male,06/03/2009,0.3,23.5,1,Malnutrition,March,2009
+ES2841,NA,NA,NA,pup,male,08/03/2009,0.6,36.5,1,Malnutrition,March,2009
+ES2853,NA,NA,NA,pup,female,18/03/2009,0.1,25.5,1,Malnutrition,March,2009
+ES2855,1,1,NA,pup,female,18/03/2009,0.6,39,1,Malnutrition,March,2009
+ES2856,NA,NA,NA,pup,male,18/03/2009,1.8,47,1,Malnutrition,March,2009
+ES2865,1,1,NA,pup,male,23/03/2009,0.3,30.5,1,Malnutrition,March,2009
+ES2875,NA,NA,NA,pup,male,27/03/2009,0.5,41,1,Malnutrition,March,2009
+ES2879,NA,NA,NA,pup,female,28/03/2009,0.5,27.5,1,Malnutrition,March,2009
+ES2887,1,1,NA,pup,male,30/03/2009,0.7,38.2,1,Malnutrition,March,2009
+ES2896,NA,NA,NA,pup,male,04/04/2009,0.3,33.5,1,Malnutrition,April,2009
+ES2902,NA,NA,NA,pup,male,05/04/2009,0.7,35,1,Malnutrition,April,2009
+ES2934,NA,NA,NA,pup,female,22/04/2009,0.3,31,1,Malnutrition,April,2009
+ES2942,NA,NA,NA,pup,female,27/04/2009,0.8,35,1,Malnutrition,April,2009
+ES2976,NA,NA,NA,pup,male,20/02/2010,0.4,43,1,Malnutrition,February,2010
+ES2978,NA,NA,NA,pup,male,27/02/2010,0.5,29.5,1,Malnutrition,February,2010
+ES2980,NA,NA,NA,pup,male,28/02/2010,0.5,38,1,Malnutrition,February,2010
+ES2985,1,1,NA,pup,male,04/03/2010,0.5,31.5,1,Malnutrition,March,2010
+ES2986,NA,NA,NA,pup,female,06/03/2010,0.6,30,1,Malnutrition,March,2010
+ES2991,NA,NA,NA,pup,female,08/03/2010,0.5,33.5,1,Malnutrition,March,2010
+ES2997,NA,NA,NA,pup,male,11/03/2010,0.6,37.5,1,Malnutrition,March,2010
+ES3009,NA,NA,NA,pup,female,15/03/2010,0.3,32.5,1,Malnutrition,March,2010
+ES3020,NA,NA,NA,pup,female,17/03/2010,0.6,32.5,1,Malnutrition,March,2010
+ES3023,NA,NA,NA,pup,female,18/03/2010,0.4,30,1,Malnutrition,March,2010
+ES3025,NA,NA,NA,pup,female,19/03/2010,0.4,34,1,Malnutrition,March,2010
+ES3027,NA,NA,NA,pup,male,19/03/2010,0.5,39.5,1,Malnutrition,March,2010
+ES3031,NA,NA,NA,pup,female,20/03/2010,0.9,24.5,1,Malnutrition,March,2010
+ES3035,NA,NA,NA,pup,male,22/03/2010,0.3,31.5,1,Malnutrition,March,2010
+ES3037,NA,NA,NA,pup,male,22/03/2010,0.7,35,1,Malnutrition,March,2010
+ES3039,NA,NA,NA,pup,female,23/03/2010,0.4,30,1,Malnutrition,March,2010
+ES3044,NA,NA,NA,pup,female,26/03/2010,0.6,35.5,1,Malnutrition,March,2010
+ES3052,NA,NA,NA,pup,male,27/03/2010,0.2,29.5,1,Malnutrition,March,2010
+ES3055,NA,NA,NA,pup,female,27/03/2010,0.7,35,1,Malnutrition,March,2010
+ES3062,NA,NA,NA,pup,male,29/03/2010,0.7,39.5,1,Malnutrition,March,2010
+ES3148,1,1,NA,pup,male,25/01/2011,1.4,33.5,1,Malnutrition,January,2011
+ES3150,1,1,NA,pup,female,02/03/2011,0.5,31.5,1,Malnutrition,March,2011
+ES3151,NA,NA,NA,pup,male,02/03/2011,0.6,36.5,1,Malnutrition,March,2011
+ES3152,NA,NA,NA,pup,male,05/03/2011,0.5,36,1,Malnutrition,March,2011
+ES3153,NA,NA,NA,pup,female,06/03/2011,0.6,40,1,Malnutrition,March,2011
+ES3154,1,1,NA,pup,female,07/03/2011,0.3,31.5,1,Malnutrition,March,2011
+ES3157,1,1,NA,pup,male,09/03/2011,0.8,40,1,Malnutrition,March,2011
+ES3160,NA,NA,NA,pup,female,12/03/2011,0.4,28.5,1,Malnutrition,March,2011
+ES3163,NA,NA,NA,pup,male,13/03/2011,0.2,30.5,1,Malnutrition,March,2011
+ES3169,NA,NA,NA,pup,male,17/03/2011,0.7,40,1,Malnutrition,March,2011
+ES3174,NA,NA,NA,pup,female,21/03/2011,0.3,40,1,Malnutrition,March,2011
+ES3175,NA,NA,NA,pup,male,22/03/2011,1.8,48,1,Malnutrition,March,2011
+ES3180,NA,NA,NA,pup,female,26/03/2011,0.5,36,1,Malnutrition,March,2011
+ES3182,NA,NA,NA,pup,male,28/03/2011,0.2,31,1,Malnutrition,March,2011
+ES3189,NA,NA,NA,pup,male,31/03/2011,0.8,30.5,1,Malnutrition,March,2011
+ES3193,NA,NA,NA,pup,male,01/04/2011,0.9,36,1,Malnutrition,April,2011
+ES3197,NA,NA,NA,pup,male,03/04/2011,0.7,32.5,1,Malnutrition,April,2011
+ES3203,NA,NA,NA,pup,male,07/04/2011,0.8,27,1,Malnutrition,April,2011
+ES3214,NA,NA,NA,pup,male,18/04/2011,0.6,32.5,1,Malnutrition,April,2011
+ES3247,NA,NA,NA,weaner,female,05/03/2012,0.8,29,1,Malnutrition,March,2012
+ES3256,1,1,NA,pup,male,14/03/2012,0.8,40,1,Malnutrition,March,2012
+ES3258,1,NA,NA,pup,female,17/03/2012,0.3,28.5,1,Malnutrition,March,2012
+ES3279,NA,NA,NA,pup,female,25/03/2012,0.7,37.5,1,Malnutrition,March,2012
+ES3283,1,1,1,pup,male,25/03/2012,1.4,39.5,1,Malnutrition,March,2012
+ES3290,NA,NA,NA,pup,male,28/03/2012,1.5,37,1,Malnutrition,March,2012
+ES3291,NA,NA,NA,pup,male,28/03/2012,1.3,42.5,1,Malnutrition,March,2012
+ES3300,NA,NA,NA,pup,female,31/03/2012,0.9,44.5,1,Malnutrition,March,2012
+ES3306,NA,NA,NA,pup,female,02/04/2012,0.4,32.5,1,Malnutrition,April,2012
+ES3332,NA,NA,NA,pup,female,14/04/2012,0.9,37.5,1,Malnutrition,April,2012
+ES3357,1,NA,NA,pup,male,04/05/2012,0.9,39.5,1,Malnutrition,May,2012
+ES2532,1,NA,NA,pup,female,12/03/2006,0.3,33.5,2,Trauma,March,2006
+ES2551,1,1,1,pup,male,26/03/2006,0.6,31,2,Trauma,March,2006
+ES2554,1,1,NA,pup,male,07/04/2006,0.6,36,2,Trauma,April,2006
+ES2628,NA,NA,NA,yearling,female,10/03/2007,1.1,111.5,2,Trauma,March,2007
+ES2719,NA,NA,NA,pup,female,25/02/2008,4.7,103,2,Trauma,February,2008
+ES2787,1,1,NA,pup,male,12/04/2008,1.3,37.5,2,Trauma,April,2008
+ES2792,NA,NA,NA,pup,male,14/04/2008,0.9,30,2,Trauma,April,2008
+ES2816,1,1,1,pup,male,11/05/2008,1,44,2,Trauma,May,2008
+ES2826,NA,NA,NA,pup,male,30/08/2008,NA,56,2,Trauma,August,2008
+ES2829,1,1,1,pup,male,01/11/2008,3,80,2,Trauma,November,2008
+ES2832,1,NA,NA,yearling,male,16/02/2009,0.7,67,2,Trauma,February,2009
+ES2852,NA,NA,NA,pup,male,17/03/2009,1.5,37.5,2,Trauma,March,2009
+ES2868,1,1,NA,pup,male,01/05/2009,1,49,2,Trauma,May,2009
+ES2872,NA,NA,NA,pup,male,26/03/2009,1.1,48,2,Trauma,March,2009
+ES2956,1,1,NA,pup,male,24/05/2009,2,47,2,Trauma,May,2009
+ES3011,1,1,NA,pup,male,15/03/2010,0.3,35.5,2,Trauma,March,2010
+ES3155,1,1,NA,pup,female,09/03/2011,0.4,58,2,Trauma,March,2011
+ES3354,1,1,1,pup,female,01/05/2012,2,40,2,Trauma,May,2012
+FnMa012912,NA,NA,NA,pup,male,27/01/2012,NA,NA,2,Trauma,January,2012
+ES2593,NA,NA,NA,pup,male,03/05/2006,1.6,49.5,3,Bacterial infection,May,2006
+ES3206,NA,NA,NA,pup,female,10/04/2011,0.7,35.5,3,Bacterial infection,April,2011
+ES3207,1,1,NA,pup,male,10/04/2011,0.6,34.5,3,Bacterial infection,April,2011
+ES3230,1,1,NA,pup,male,21/07/2011,1.9,72.5,3,Bacterial infection,July,2011
+ES2557,1,1,NA,pup,male,30/03/2006,0.7,39,3,Bacterial infection,March,2006
+ES2599,1,1,NA,pup,male,04/06/2006,1.5,43.5,3,Bacterial infection,June,2006
+ES2603,NA,NA,NA,yearling,male,14/08/2006,0.5,73.5,3,Bacterial infection,August,2006
+ES2641,NA,NA,NA,yearling,male,18/03/2007,0.9,72.5,3,Bacterial infection,March,2007
+ES2690,1,1,NA,pup,male,19/04/2007,1.7,39.5,3,Bacterial infection,April,2007
+ES2729,1,NA,NA,pup,female,09/03/2008,1,36.5,3,Bacterial infection,March,2008
+ES2774,1,1,NA,pup,male,30/03/2008,0.6,42,3,Bacterial infection,March,2008
+ES2775,NA,NA,NA,pup,male,30/03/2008,0.8,36.5,3,Bacterial infection,March,2008
+ES2782,1,1,NA,pup,female,08/04/2008,0.8,35,3,Bacterial infection,April,2008
+ES2794,1,NA,NA,pup,female,14/04/2008,0.4,36,3,Bacterial infection,April,2008
+ES2795,1,NA,NA,pup,male,15/04/2008,1,36.5,3,Bacterial infection,April,2008
+ES2830,NA,NA,NA,pup,female,16/11/2008,0.6,48,3,Bacterial infection,November,2008
+ES2850,1,NA,NA,pup,male,16/03/2009,1,38.2,3,Bacterial infection,March,2009
+ES2876,1,NA,NA,pup,female,27/03/2009,1.7,42.5,3,Bacterial infection,March,2009
+ES2936,1,1,NA,pup,male,23/04/2009,0.9,34.5,3,Bacterial infection,April,2009
+ES2945,NA,NA,NA,pup,female,30/04/2009,0.5,38,3,Bacterial infection,April,2009
+ES3019,1,1,NA,pup,female,17/03/2010,0.2,32,3,Bacterial infection,March,2010
+ES3159,1,1,NA,pup,male,11/03/2011,0.7,32,3,Bacterial infection,March,2011
+ES3208,NA,NA,NA,pup,male,10/04/2011,1.1,39.5,3,Bacterial infection,April,2011
+ES3252,1,1,1,yearling,female,11/03/2012,2,NA,3,Bacterial infection,March,2012
+ES3289,1,1,1,pup,male,28/03/2012,1.1,38.4,3,Bacterial infection,March,2012
+ES3330,1,NA,NA,yearling,female,13/04/2012,1,66,3,Bacterial infection,April,2012
+ES3351,1,1,1,pup,female,28/04/2012,1.3,38.5,3,Bacterial infection,April,2012
+ES3369,NA,NA,NA,pup,male,21/06/2012,1.1,46.5,3,Bacterial infection,June,2012
+ES2581,NA,NA,NA,pup,female,13/04/2006,0.8,33,4,Congenital defect,April,2006
+ES2730,NA,NA,NA,pup,female,09/03/2008,2,55,4,Congenital defect,March,2008
+ES2741,1,1,NA,pup,male,17/03/2008,1.5,38.5,4,Congenital defect,March,2008
+ES2763,1,1,NA,pup,female,27/03/2008,0.5,31.5,4,Congenital defect,March,2008
+ES2820,1,NA,NA,pup,male,21/05/2008,1.3,39.2,4,Congenital defect,May,2008
+ES2854,NA,NA,NA,pup,male,18/03/2009,0.1,32.6,4,Congenital defect,March,2009
+ES2857,1,1,NA,pup,male,19/03/2009,0.5,41,4,Congenital defect,March,2009
+ES2989,NA,NA,NA,pup,male,07/03/2010,0.4,31,4,Congenital defect,March,2010
+ES2999,NA,NA,NA,pup,female,11/03/2010,1,35.5,4,Congenital defect,March,2010
+ES3060,1,1,NA,pup,male,28/03/2010,1,44.5,4,Congenital defect,March,2010
+ES3061,1,NA,NA,pup,male,29/03/2010,1.1,39,4,Congenital defect,March,2010
+ES3149,NA,NA,NA,pup,female,06/02/2011,0.9,45,4,Congenital defect,February,2011
+ES3211,NA,NA,NA,pup,male,16/04/2011,0.7,39,4,Congenital defect,April,2011
+ES3217,1,NA,NA,pup,male,22/04/2011,1.2,42,4,Congenital defect,April,2011
+ES3218,NA,NA,NA,pup,male,28/04/2011,0.9,29.5,4,Congenital defect,April,2011
+ES3223,1,1,NA,pup,male,23/05/2011,1,45,4,Congenital defect,May,2011
+ES3255,1,NA,NA,pup,male,13/03/2012,0.4,33.5,4,Congenital defect,March,2012
+ES3304,NA,NA,NA,pup,male,01/04/2012,1.5,35.5,4,Congenital defect,April,2012
+ES2695,1,1,NA,pup,male,24/04/2007,1.8,40.5,5,Protozoa,April,2007
+ES2714,NA,NA,NA,pup,female,05/01/2008,0.7,44.5,5,Protozoa,January,2008
+ES2715,NA,NA,NA,pup,male,06/01/2008,0.5,33,5,Protozoa,January,2008
+ES3347,1,1,1,pup,female,24/04/2012,1.3,41,5,Protozoa,April,2012
+ES2576,NA,NA,NA,pup,female,08/04/2006,0.6,34.5,6,Otostrongylis,April,2006
+ES2586,NA,NA,NA,pup,female,18/04/2006,1.2,41.5,6,Otostrongylis,April,2006
+ES2588,NA,NA,NA,pup,male,23/04/2006,0.9,32,6,Otostrongylis,April,2006
+ES2589,1,1,NA,pup,male,27/04/2006,1,42,6,Otostrongylis,April,2006
+ES2594,NA,NA,NA,pup,male,03/05/2006,0.8,37,6,Otostrongylis,May,2006
+ES2624,NA,NA,NA,pup,male,07/07/2007,0.7,38,6,Otostrongylis,July,2007
+ES2692,1,1,1,pup,male,21/04/2007,1,38.5,6,Otostrongylis,April,2007
+ES2697,1,1,1,pup,male,28/04/2007,1,42,6,Otostrongylis,April,2007
+ES2698,1,1,NA,pup,male,07/05/2007,1.7,43.5,6,Otostrongylis,May,2007
+ES2740,NA,NA,NA,pup,male,17/03/2008,0.6,44,6,Otostrongylis,March,2008
+ES2772,NA,NA,NA,pup,female,30/03/2008,1,33.5,6,Otostrongylis,March,2008
+ES2805,1,1,NA,pup,female,26/04/2008,1.3,36,6,Otostrongylis,April,2008
+ES2808,NA,NA,NA,pup,female,27/04/2008,0.4,40.5,6,Otostrongylis,April,2008
+ES2810,NA,NA,NA,pup,male,28/04/2008,0.9,41.5,6,Otostrongylis,April,2008
+ES2811,NA,NA,NA,pup,female,29/04/2008,0.6,42,6,Otostrongylis,April,2008
+ES2821,NA,NA,NA,pup,female,27/05/2008,1,41,6,Otostrongylis,May,2008
+ES2825,NA,NA,NA,pup,female,01/07/2008,0.6,53.5,6,Otostrongylis,July,2008
+ES2845,1,1,NA,pup,male,26/04/2009,0.3,37.5,6,Otostrongylis,April,2009
+ES2895,1,1,NA,pup,male,04/04/2009,1.2,45,6,Otostrongylis,April,2009
+ES2906,1,1,NA,pup,female,07/04/2009,0.7,35,6,Otostrongylis,April,2009
+ES2909,NA,NA,NA,pup,female,10/04/2009,0.8,38.5,6,Otostrongylis,April,2009
+ES2910,1,1,NA,pup,female,01/06/2009,0.6,39,6,Otostrongylis,June,2009
+ES2913,1,1,1,pup,female,12/04/2009,0.7,35,6,Otostrongylis,April,2009
+ES2915,1,1,1,pup,female,13/04/2009,0.4,39,6,Otostrongylis,April,2009
+ES2919,1,NA,NA,pup,male,16/04/2009,0.9,44.5,6,Otostrongylis,April,2009
+ES2920,NA,NA,NA,pup,female,16/04/2009,0.6,36.5,6,Otostrongylis,April,2009
+ES2923,1,NA,NA,pup,female,18/04/2009,0.7,39,6,Otostrongylis,April,2009
+ES2927,NA,NA,NA,pup,female,19/04/2009,0.1,32,6,Otostrongylis,April,2009
+ES2929,1,NA,NA,pup,female,20/04/2009,0.6,27.5,6,Otostrongylis,April,2009
+ES2930,1,1,1,pup,female,21/04/2009,0.1,35.5,6,Otostrongylis,April,2009
+ES2943,NA,NA,NA,pup,female,29/04/2009,1,36,6,Otostrongylis,April,2009
+ES2944,NA,NA,NA,pup,male,30/04/2009,1.1,45,6,Otostrongylis,April,2009
+ES2946,1,1,1,pup,male,01/05/2009,1,38,6,Otostrongylis,May,2009
+ES2948,1,1,NA,pup,female,06/05/2009,1,45,6,Otostrongylis,May,2009
+ES2952,1,1,NA,pup,female,15/05/2009,0.1,39.5,6,Otostrongylis,May,2009
+ES2954,1,1,NA,pup,male,24/05/2009,0.7,42.5,6,Otostrongylis,May,2009
+ES2955,1,1,NA,pup,female,22/05/2009,1,45,6,Otostrongylis,May,2009
+ES2957,1,NA,NA,pup,male,27/05/2009,2,49.6,6,Otostrongylis,May,2009
+ES2960,1,NA,NA,pup,male,31/05/2009,1.2,46,6,Otostrongylis,May,2009
+ES3124,1,NA,NA,pup,female,06/05/2010,0.9,40,6,Otostrongylis,May,2010
+ES3129,NA,NA,NA,pup,male,14/05/2010,1.8,52.5,6,Otostrongylis,May,2010
+ES3200,NA,NA,NA,pup,male,19/06/2011,1.5,41.5,6,Otostrongylis,June,2011
+ES3225,NA,NA,NA,weaner,male,11/06/2011,1.2,45,6,Otostrongylis,June,2011
+ES3231,1,NA,NA,pup,male,24/07/2011,0.8,54.5,6,Otostrongylis,July,2011
+ES3232,NA,NA,NA,yearling,male,06/08/2011,1,NA,6,Otostrongylis,August,2011
+ES3287,1,1,NA,pup,male,27/03/2012,0.9,39,6,Otostrongylis,March,2012
+ES3296,NA,NA,NA,pup,female,30/03/2012,1.3,39.5,6,Otostrongylis,March,2012
+ES3307,1,1,NA,pup,male,02/04/2012,0.8,39.5,6,Otostrongylis,April,2012
+ES3311,NA,NA,NA,pup,male,02/04/2012,0.6,41.5,6,Otostrongylis,April,2012
+ES3314,1,1,NA,pup,male,03/04/2012,0.9,43.5,6,Otostrongylis,April,2012
+ES3323,1,NA,NA,pup,male,07/04/2012,1,50,6,Otostrongylis,April,2012
+ES3329,NA,NA,NA,pup,male,13/04/2012,0.6,36.5,6,Otostrongylis,April,2012
+ES3331,NA,NA,NA,yearling,male,13/04/2012,1.8,85.5,6,Otostrongylis,April,2012
+ES3335,1,1,1,pup,female,15/04/2012,1.2,37.5,6,Otostrongylis,April,2012
+ES3342,1,1,NA,pup,male,18/04/2012,0.9,41.5,6,Otostrongylis,April,2012
+ES3344,NA,NA,NA,pup,female,23/04/2012,1,42.5,6,Otostrongylis,April,2012
+ES3350,NA,NA,NA,pup,female,27/04/2012,1.3,43,6,Otostrongylis,April,2012
+ES3356,1,1,1,pup,female,03/05/2012,0.8,48.5,6,Otostrongylis,May,2012
+ES3358,1,1,1,pup,female,12/05/2012,0.7,39.5,6,Otostrongylis,May,2012
+ES3359,NA,NA,NA,pup,male,12/05/2012,1,48,6,Otostrongylis,May,2012
+ES3361,NA,NA,NA,pup,female,19/05/2012,NA,48.5,6,Otostrongylis,May,2012
+ES3368,1,1,1,pup,female,14/06/2012,2,38,6,Otostrongylis,June,2012
