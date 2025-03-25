@@ -1,7 +1,7 @@
 # Northern elephant seal inbreeding models
 
 This repository contains all raw data, plots and scripts for the inbreeding models implemented in the published paper:
-Hoffman, J. I., Vendrami, D. L. J., Hench, K., Chen, R. S., Stoffel, M. A., Kardos, M., Amos, W., Kalinowski, J., Rickert, D., Köhrer, K., Wachtmeister, T., Goebel, M. E., Bonin, C. A., Gulland, F. M. D., & Dasmahapatra, K. K. (2024). Genomic and fitness consequences of a near-extinction event in the northern elephant seal. Nature Ecology & Evolution, 8(12), 2309–2324. (-> link to the paper)[https://doi.org/10.1038/s41559-024-02533-2]
+Hoffman, J. I., Vendrami, D. L. J., Hench, K., Chen, R. S., Stoffel, M. A., Kardos, M., Amos, W., Kalinowski, J., Rickert, D., Köhrer, K., Wachtmeister, T., Goebel, M. E., Bonin, C. A., Gulland, F. M. D., & Dasmahapatra, K. K. (2024). Genomic and fitness consequences of a near-extinction event in the northern elephant seal. Nature Ecology & Evolution, 8(12), 2309–2324. [-> link to the paper](https://doi.org/10.1038/s41559-024-02533-2)
 
 
 To import the repository to your local device, ensure you have git installed and execute the following command in the terminal:
